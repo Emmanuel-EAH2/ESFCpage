@@ -1,0 +1,43 @@
+.boton{
+    background-color: rgb(10, 207, 181); width: 100px;  height: 100px;  margin: 0px 15px; border: 1px solid #f3f4;
+}
+
+.boton:hover{
+    border: 2px solid rgba(15, 2, 46, 0.788);
+}
+
+.boton2{
+    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
+}
+.boton2:hover{
+    border: 2px solid rgba(102, 0, 0, 0.856);
+}
+
+.boton3{
+    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #f3f4;
+}
+.boton3:hover{
+    border: 2px solid rgba(102, 0, 0, 0.856);   
+}
+ 
+.boton4{
+    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
+}
+.boton4:hover{
+    border: 2px solid rgba(15, 2, 46, 0.788);  
+}
+ 
+.boton5{
+    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
+}
+.boton5:hover{
+    border: 2px solid rgba(46, 38, 2, 0.788);  
+}
+ 
+.boton6{
+    background-color: rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
+}
+.boton6:hover{
+    border: 2px solid rgba(2, 46, 8, 0.788);  
+}
+ 

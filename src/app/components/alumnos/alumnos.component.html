@@ -1,0 +1,143 @@
+<div class="cotenedor">
+    <form>
+    <h2>Escuela Secundaria de Formacion Catolica</h2>
+    <input type="text" name="Secundaria" id="Secundaria" placeholder="Nombre de la Secundaria" style="width: 450px; margin: 0px 0px 10px 450px">
+    <h4 style="text-align: center;">Solicitud de inscripcion al ciclo <strong>2021-2022</strong></h4>
+<!-- 
+    <form action="index.html">
+        <label>GRADO</label>
+       <select name="1" id="grado"></select>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </form> -->
+    <hr>
+    <h2>Datos Personales</h2>
+<div>
+  <input type="text" id="nombre" placeholder="Escibe tu Nombre" minlength="4">
+  <input type="text" id="ApellidoP" placeholder="Escibe tu Apellido Paterno">
+  <input type="text" id="ApellidoM" placeholder="Escibe tu Apellido Materno">
+  <input type="number" min="12" max="18" name="edad" id="edad" placeholder="Edad" style="width: 65px; margin:0px 0px 0px 0px;">
+
+  <input type="text" name="calle" id="calle" placeholder="Calle" style="margin: 10px 0px 3px 40px;">
+  <input type="number" min="1" name="numero" id="numeroCalle" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;">
+  <input type="text" name="colonia" id="colonia" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;">
+  <input type="number" min="1" name="cp" id="cp" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;">
+
+  <input type="number" lang="12" name="celular" id="celular" placeholder="Celular" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;">
+  <input type="number" lang="12" name="telefono" id="telefono" placeholder="Télefono" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;">
+  <input type="email" name="correo" id="correo" placeholder="Correo" style="margin: 10px 0px 3px 40px;">
+
+  <input type="date" name="fecN" id="fecN" placeholder="Fecha de Nacimiento" style="width: 180px;">
+
+  <input type="text" name="lugarN" id="lugarNac" placeholder="Lugar de nacimiento">
+<hr>
+
+    <h2>Estudios realizados para la vida laical</h2>
+
+    <p>
+        primaria: <input type="number" name="primaria" id="primaria"  style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="6">año    
+        
+        Secundaria: <input type="number" name="secundaria" id="secundaria"  style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="3">año  
+        
+        Bachillerato: <input type="number" name="prepa" id="prepa" style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="3">  
+        
+        Otro(especifica): <input type="text" name="otro" id="otro" style=" width: 500px;padding: 0px; margin: 0px; font-size: 15px; height: 20px;"></p>
+
+        <h4>Estudios acutales</h4>
+    <p>
+        Instituto: <input type="text" name="instituto" id="instituto"  style=" width: 630px;padding: 0px; margin: 3px 3px; font-size: 15px; height: 30px;">
+        
+        Especialidad: <input type="text" name="especialidad" id="especialidad"  style=" padding: 0px; margin: 3px 3px;; font-size: 15px; height: 30px;">
+        
+        Grado: <input type="number" min="1" max="6" name="gradoI" id="gradoI" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;">
+        
+        Hora de entrada:<input type="text" name="entrada" id="entrada" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" min="1" max="12"> 
+        
+        Hora de salida: <input type="text   " name="salida" id="salida" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" min="1" max="12">
+    </p>
+
+<hr>
+   
+<h2>Estudios realizados para la vida Eterna</h2>
+<p>
+    Grado de estudios al qie llegaste en tu ultimo grado de catesismo(primaria): <input type="number" name="gradoC" id="GradoC" style="width: 30px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="4" max="9">
+
+    Otros Estidos personales: <input type="text" name="otros" id="otros2" style=" width: 200px;padding: 0px 0px 0px 0px; margin: 0px; font-size: 15px; height: 20px;">
+
+    Sacramentos Recibidos: 
+
+
+    ¿Ya sabes cual es tu vocacion en la vida?(en caso de que si,especifica): <input type="text" name="vocacion" id="vocacion" style="padding: 0px 0px 0px 0px; margin: 0px; font-size: 15px; height: 20px;">
+
+</p>
+    <hr>
+    
+    <h2>Ocupaciones diversas</h2>
+        <p>
+            Escribe el nombre de las agrupacioes de cualquier tipo a las que pertenezcas(religiosas, deportivas, politicas, sociales, etc.), asi como el cargo que ocupas: <input type="text" name="ocupaciones" id="ocupaciones"  style="width: 600px; padding: 0px 0px 0px 0px; margin: 0px; font-size: 15px; height: 40px;">
+        </p>
+
+    <div class="trabajo">    
+        <p>
+            ¿tienes algun trabajo?
+        <button id="trabajoSi" type="button"> Si </button>
+        <button id="trabajoNo" type="button"> No </button>
+        </p>
+    <div class="Trabajo">
+        <p class="trabajo2"> 
+            <b>Lugar de trabajo</b><br>
+            <input type="text" name="calleTrabajo" id="calleTrabajo" placeholder="Calle" style=" margin: 0; width: 450px;">
+            <input type="number" min="1" name="numeroTrabajo" id="numeroCalleTra" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;">
+            <input type="text" name="coloniaTra" id="coloniaTra" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;">
+            <input type="number" min="1" name="cpTra" id="cpTra" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;">
+            <input type="text" name="nomEmpresa" id="nomEmpresa" placeholder="Nombre de le Empresa" style=" margin: 0">
+            <input type="number" name="horario" id="horario" style="width:200px;" placeholder="Horario" style=" margin: 0">
+            <input type="text" name="tareas" id="tareas" style="width:1000px;" placeholder="Tareas que realiza" style=" margin: 0">
+        </p>
+    </div> 
+    </div>
+    <hr>
+
+    <p>
+        <h2>Datos Familiares</h2>
+        <div class="d-flex">
+        Papá: <input type="text" name="Apellidopadre" id="Apellidopadre" placeholder="Apellido Paterno" style=" margin: 0;">
+        <input type="text" name="Apepadre" id="Apepadre" placeholder="Apellido Materno">
+        <input type="text" name="NomP" id="NomP" placeholder="Nombre">
+           <p style="margin: 10px 0px;">vive:</p>
+            <div>
+                <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
+                <input type="radio" class="form-check-input" type="radio" name="viveP"  value="Si" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;">
+            </div>
+            <div>
+                <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
+                <input type="radio" class="form-check-input" type="radio" name="viveP"  value="No" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;">
+            </div>
+        </div>
+
+        <input type="text" name="ocupacionP" id="ocupacionP" placeholder="Ocupacion"><br><br>
+       
+        <div class="d-flex">
+            Mamá: <input type="text" name="Apellidopadre" id="Apellidopadre" placeholder="Apellido Paterno" style=" margin: 0;">
+            <input type="text" name="Apepadre" id="Apepadre" placeholder="Apellido Materno">
+            <input type="text" name="NomP" id="NomP" placeholder="Nombre">
+            <p style="margin: 10px 0px;">vive:</p>
+                <div>
+                    <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
+                    <input type="radio" class="form-check-input" type="radio" name="viveM"  value="Si" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;">
+                </div>
+                <div>
+                    <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
+                    <input type="radio" class="form-check-input" type="radio" name="viveM"  value="No" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;">
+                </div>
+        </div>
+        <input type="text" name="ocupacionP" id="ocupacionP" placeholder="Ocupacion"><br><br>
+        casados por la Iglesia Católica:  casados al civil: <br>
+    
+        numero de hermanos: <input type="number" name="hermanos" id="hermanos" style=" margin: 0; width: 50px;"> Edades(de menor a mayor sin incluirte): <input type="numer" name="edadesH" id="edadesH" style=" margin: 0; width: 300px;">
+    </div>
+            <button id="guardar" type="submit">ENVIAR</button>
+    </form>
+    </div>
+    <h2>"Por una profunda formacion moral y cristiana" SJPII</h2>
