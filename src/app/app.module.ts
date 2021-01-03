@@ -17,6 +17,7 @@ import { CoordinadoresComponent } from './components/coordinadores/coordinadores
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
 import { EventosComponent } from './components/eventos/eventos.component';
+import { AlumnadoComponent } from './components/alumnado/alumnado.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EventosComponent } from './components/eventos/eventos.component';
     CoordinadoresComponent,
     AlumnosComponent,
     ProfesoresComponent,
-    EventosComponent
+    EventosComponent,
+    AlumnadoComponent
   ],
   imports: [
     BrowserModule,
