@@ -5,14 +5,15 @@
 }
 
 input{
-    width: 350px;
+    width: 400px;
     height: 40px;
-    margin: 0px 5px 5px 50px;
-    z-index: 1;
+    margin: 0px 5px 5px 10px;
     border: transparent;
     text-align: center;
-    font-size: 18px;    
-    border-bottom: 3px solid #111;
+    font-size: 18px;   
+    border-bottom: 2px solid #666f;
+    background-color: transparent;
+    color:#021;
     /* filter: saturate(1000%) contrast(10); */
 }
 
@@ -20,16 +21,14 @@ input:hover{
     height: 40px;
 }
 
-input:focus{
-    border-radius: 40px;
-    border-bottom: transparent;
-    height: 40px;
-    /* background-color:#fff; */
-    /* background: linear-gradient(#3333, #ccc); */
-}
-
 h2{
     text-align: center;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+mat-horizontal-stepper{
+    background: linear-gradient(#777 4% , #f477 40%, #f2a6 60%, #f0f7 80%, #555 100%);
+    border-radius: 40px;
+    margin: 0px 5px;
 }

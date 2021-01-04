@@ -5,3 +5,11 @@
     background-color: #999;
     border-bottom: 1px solid #333;
 }
+
+h1{
+    cursor: pointer;
+}
+
+h1:focus{
+    border: hidden;
+}

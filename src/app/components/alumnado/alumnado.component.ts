@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { alumnosModel } from "../../models/alumnos";
 import { AlumnosService } from "../../service/alumnos.service";
+// import { Route } from "@angular/router";
 
 
 @Component({
@@ -11,10 +12,11 @@ import { AlumnosService } from "../../service/alumnos.service";
 })
 
 export class AlumnadoComponent implements OnInit {
-  displayedColumns: string[] = ['hola', 'hola1', 'hola2', 'hola3'];
+  displayedColumns: string[] = ['hola', 'hola1', 'hola2', 'hola3', 'hola4', 'hola5', 'hola6', 'hola7'];
   alumnoNew: alumnosModel = new alumnosModel();
   nuevoAlumno: any;
   alumnos:any;
+  idUsuarioActualizar: any
   constructor(private app: AlumnosService) { }
 
   ngOnInit(): void {
@@ -22,6 +24,18 @@ export class AlumnadoComponent implements OnInit {
       this.alumnos = data.alumnos;
       console.log(this.alumnos);
   }).catch((err)=>console.log(err));
+}
+
+modifcar(){
+this.app.putAlumnos( this.idUsuarioActualizar, this.alumnoNew).then((data:any)=>{
+  this.alumnoNew = data
+  console.log(this.alumnoNew);
+ }).catch((error)=>console.log(error));
+}
+
+idActualizar(idAlumno: string){
+  this.idUsuarioActualizar = idAlumno;
+  console.log(this.idUsuarioActualizar);
 }
 
   }

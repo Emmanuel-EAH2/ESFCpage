@@ -17,5 +17,8 @@ export class AlumnosService {
     return this.http.post('http://localhost:3003/alumnos', alumno).toPromise();
  }
 
+ putAlumnos(id: string, alumno: alumnosModel){
+   return this.http.put(`http://localhost:3003/alumnos/${id}`, alumno).toPromise(); 
+ }
 
 }

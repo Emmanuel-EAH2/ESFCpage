@@ -4,13 +4,17 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatTooltipModule } from "@angular/material/tooltip";
 import {MatTableModule} from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatStepperModule} from '@angular/material/stepper'
 
 const MaterialComponents =[
   MatButtonModule,
   MatIconModule,
   MatProgressSpinnerModule,
   MatTooltipModule,
-  MatTableModule
+  MatTableModule,
+  MatExpansionModule,
+  MatStepperModule
 ]
 
 @NgModule({
