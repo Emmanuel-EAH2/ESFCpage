@@ -1,3 +1,70 @@
-table {
+@keyframes opacidad{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+*{
+  animation: opacidad 2s both;
+}
+
+table{
     width: 90%;
   }
+  input{
+    width: 400px;
+    height: 40px;
+    margin: 0px 5px 5px 10px;
+    border: transparent;
+    text-align: center;
+    font-size: 18px;   
+    border-bottom: 2px solid #666f;
+    background-color: transparent;
+    color:#021;
+    /* filter: saturate(1000%) contrast(10); */
+}
+
+input:hover{
+    height: 40px;
+}
+
+h2{
+    margin: 25px 270px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.modal-content{
+  width: 1300px;
+  margin: 20px -400px;
+}
+
+.modal2{
+  background: radial-gradient(#fff 0%, #fff 93%, #333 100%);
+  border-radius: 30px;
+}
+
+.titulo{
+  margin: 10px 270px;
+    text-align: center;
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1.2px;
+    color: #ff017fff;
+}
+mat-header-cell{
+  font-size: 15px;
+}
+
+mat-header-cell:hover{
+  color: #ff017fff;
+}
+mat-cell:hover{
+  color: #ff017fff;
+}
+.modal1{
+  background: radial-gradient(#fff 5% ,#eee 80%,#222 100%);
+  padding: 0;
+}

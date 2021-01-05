@@ -1,7 +1,16 @@
+@keyframes opacidad{
+    from{
+      opacity: 0;
+    }to{
+      opacity: 1;
+    }
+  }
+
 *{
     box-sizing: border-box;
     font-family: sans-serif;
     margin-left: 3px;
+    animation: opacidad 2s both;
 }
 
 input{
@@ -22,13 +31,14 @@ input:hover{
 }
 
 h2{
+    margin: 25px 270px;
     text-align: center;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 mat-horizontal-stepper{
-    background: linear-gradient(#777 4% , #f477 40%, #f2a6 60%, #f0f7 80%, #555 100%);
+    background: linear-gradient(#888 5% ,#ddd 18%,#ddd 80%, #777 100%);
     border-radius: 40px;
     margin: 0px 5px;
 }

@@ -16,14 +16,33 @@ export class AlumnadoComponent implements OnInit {
   alumnoNew: alumnosModel = new alumnosModel();
   nuevoAlumno: any;
   alumnos:any;
+  alumBorrado: any;
   idUsuarioActualizar: any
   constructor(private app: AlumnosService) { }
 
   ngOnInit(): void {
-    this.app.getAlumnos().then((data:any)=>{
-      this.alumnos = data.alumnos;
+    // this.app.getAlumnos().then((data:any)=>{
+    //   this.alumnos = data.alumnos;
+    //   console.log(this.alumnos);
+
+    this.app.getAlumnosActivate().then((data:any)=>{
+      this.alumnos = data
       console.log(this.alumnos);
-  }).catch((err)=>console.log(err));
+    }).catch((err)=>console.log(err));
+}
+
+  getAlumnoById(){
+    this.app.getDataById(this.idUsuarioActualizar).then((data:any)=>{
+      this.alumnoNew = data;
+      console.log(this.alumnoNew);
+    }).catch((error)=>console.log('Ocurrio un pequeño',error));
+  }
+
+eliminarAlumno(){
+  this.app.deleteAlumnos(this.idUsuarioActualizar).then((data:any)=>{
+    this.alumBorrado = data;
+    console.log(this.alumBorrado);
+  }).catch((error)=>console.log(error));
 }
 
 modifcar(){

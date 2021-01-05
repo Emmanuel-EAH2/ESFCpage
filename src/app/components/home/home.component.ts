@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatProgressSpinner, MatSpinner } from '@angular/material/progress-spinner';
+import { timer } from 'rxjs'
 
 @Component({
   selector: 'app-home',
@@ -13,5 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
    Input: MatSpinner
+
+   
 
 }
