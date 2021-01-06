@@ -5,12 +5,16 @@
     opacity: 1;
   }
 }
+
 *{
-  animation: opacidad 2s both;
+  box-sizing: border-box;
+}
+.modal3{
+  animation: opacidad 1s both;
 }
 
 table{
-    width: 90%;
+    width: 100%;
   }
   input{
     width: 400px;
@@ -55,7 +59,7 @@ h2{
     color: #ff017fff;
 }
 mat-header-cell{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 mat-header-cell:hover{
@@ -67,4 +71,8 @@ mat-cell:hover{
 .modal1{
   background: radial-gradient(#fff 5% ,#eee 80%,#222 100%);
   padding: 0;
+  animation: opacidad 1s both;
+}
+.animacion{
+  animation: opacidad 2.5s both;
 }

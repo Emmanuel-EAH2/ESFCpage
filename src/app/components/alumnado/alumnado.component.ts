@@ -12,7 +12,7 @@ import { AlumnosService } from "../../service/alumnos.service";
 })
 
 export class AlumnadoComponent implements OnInit {
-  displayedColumns: string[] = ['hola', 'hola1', 'hola2', 'hola3', 'hola4', 'hola5', 'hola6', 'hola7'];
+  displayedColumns: string[] = ['hola8', 'hola', 'hola1', 'hola2', 'hola3', 'hola4', 'hola5', 'hola6', 'hola7'];
   alumnoNew: alumnosModel = new alumnosModel();
   nuevoAlumno: any;
   alumnos:any;

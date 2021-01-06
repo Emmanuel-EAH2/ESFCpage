@@ -11,15 +11,18 @@ import { AlumnosService } from "../../service/alumnos.service";
 })
 
 export class AlumnosComponent implements OnInit {
-/**VARIABLES DE ENTORNO***/
+  /**VARIABLES DE ENTORNO***/
   alumnoNew: alumnosModel = new alumnosModel();
   nuevoAlumno: any;
   respuesta: any;
+  loading: boolean;
   constructor(private app: AlumnosService) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.app.getAlumnos().then((data:any)=>{
         console.log(data);
+        this.loading = false;
     }).catch((err)=>console.log(err)
   );
 }

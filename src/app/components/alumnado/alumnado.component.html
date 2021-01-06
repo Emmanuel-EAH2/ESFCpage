@@ -1,18 +1,23 @@
 <h2 class="titulo">Alumnos registrados</h2>
-<mat-table [dataSource]="alumnos" class="mat-elevation-z8" style="margin: 3px 5px 0px 2px;">
+<mat-table [dataSource]="alumnos" class="mat-elevation-z8 animacion" style="margin: 3px 5px 0px 2px;">
+    <ng-container matColumnDef="hola8">
+      <mat-header-cell *matHeaderCellDef style="margin: 0px">Secundaria</mat-header-cell>
+      <mat-cell *matCellDef="let alumno" style="margin: 0px"> {{alumno.secundaria}} </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="hola">
       <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
       <mat-cell *matCellDef="let alumno"> {{alumno.nombre}} {{alumno.apellidoP}} {{alumno.apellidoM}} </mat-cell>
     </ng-container>
   
     <ng-container matColumnDef="hola1">
-      <mat-header-cell *matHeaderCellDef style="z-index: 2px;"> domicilio </mat-header-cell>
-      <mat-cell *matCellDef="let alumno" style="z-index: 2px;"> {{alumno.calle}} {{alumno.numero}} {{alumno.colonia}} {{alumno.cp}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef style="margin: 0px 30px"> Domicilio </mat-header-cell>
+      <mat-cell *matCellDef="let alumno" style="margin: 0px 30px"> {{alumno.calle}} {{alumno.numero}} {{alumno.colonia}} {{alumno.cp}} </mat-cell>
     </ng-container>
   
     <ng-container matColumnDef="hola2">
-      <mat-header-cell *matHeaderCellDef style="margin-left: 48px;"> celular </mat-header-cell>
-      <mat-cell *matCellDef="let alumno" style="margin-left: 30px;"> {{alumno.celular}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef style="margin: 0px 30px"> Celular </mat-header-cell>
+      <mat-cell *matCellDef="let alumno" style="margin: 0px 30px"> {{alumno.celular}} </mat-cell>
     </ng-container>
   
     <ng-container matColumnDef="hola3">
@@ -21,23 +26,23 @@
     </ng-container>
 
     <ng-container matColumnDef="hola4">
-      <mat-header-cell *matHeaderCellDef> Lugar de Nacimiento </mat-header-cell>
-      <mat-cell *matCellDef="let alumno" style="margin-left: 41px;"> {{alumno.lugar_nac}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef style="margin: 0px 30px"> Lugar de Nacimiento </mat-header-cell>
+      <mat-cell *matCellDef="let alumno" style="margin: 0px 30px"> {{alumno.lugar_nac}}</mat-cell>
     </ng-container>
   
     <ng-container matColumnDef="hola5">
-      <mat-header-cell *matHeaderCellDef style="margin: 0px;"> Edad </mat-header-cell>
-      <mat-cell *matCellDef="let alumno" style="margin: 0px;"> {{alumno.edad}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef > Edad </mat-header-cell>
+      <mat-cell *matCellDef="let alumno">{{alumno.edad}} </mat-cell>
     </ng-container>
   
     <ng-container matColumnDef="hola6">
-      <mat-header-cell *matHeaderCellDef> correo </mat-header-cell>
-      <mat-cell *matCellDef="let alumno"> {{alumno.correo}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef style="margin: 0px 10px 0px 0px"> Correo </mat-header-cell>
+      <mat-cell *matCellDef="let alumno" style="margin: 0px 10px 0px 0px" [matTooltip]="alumno.correo"> {{alumno.correo}}</mat-cell>
     </ng-container>
 
 
     <ng-container matColumnDef="hola7">
-    <mat-header-cell *matHeaderCellDef class="text-center" style="align-self: center; text-align: center;">Acciones</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef class="text-center" style="margin: 0px 0px;">Acciones</mat-header-cell>
     <mat-cell *matCellDef="let alumno">
       <button class="btn btn-outline-danger m-1" mat-raised-button (click)="idActualizar(alumno._id)" data-toggle="modal" data-target="#ctg3">Borrar</button>
       <button class="btn btn-outline-secondary m-1" mat-raised-button (click)="idActualizar(alumno._id)" data-toggle="modal" data-target="#act">Modificar</button>
@@ -47,13 +52,13 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> 
   </mat-table>
-  <button class="btn btn-outline-success text-center col-12" style="margin: 0px 0px; letter-spacing: 1px; font-size: 20px;" mat-raised-button [routerLink]="['/alumno']" matTooltip="Agregar Alumno">Agregar Alumno <mat-icon style="font-size: 30px; margin-bottom: 10px;">person_add</mat-icon></button>
+  <button class="btn btn-outline-success text-center col-12 animacion" style="margin: 0px 0px; letter-spacing: 1px; font-size: 20px; border: 3px solid #fff" mat-raised-button [routerLink]="['/alumno']" matTooltip="Agregar Alumno">Agregar Alumno <mat-icon style="font-size: 30px; margin-bottom: 10px;">person_add</mat-icon></button>
   <div class="modal modal1" tabindex="-1" id='act'>
     <div class="modal-dialog">
         <div class="modal-content modal2">
             <div class="modal-header">
                 <!-- <h5 class="modal-title" style="font-size: 26px; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Modificar alumno</h5> -->
-                <button class="btn col-5 m-3" color="warn" mat-raised-button (click)="getAlumnoById()">Mostrar la infromacion para modificar al alumno</button>
+                <button class="btn col-5 m-3" color="warn" mat-raised-button (click)="getAlumnoById()">Mostrar infromacion del alumno para modificar</button>
                 <button class="close" type="button" class="btn btn-secondary" style="float:right;" data-dismiss="modal">Close</button>
               </div>
               <div class="modal-body">
@@ -211,7 +216,7 @@
             </div> 
         </div>
     </div>
-    <div class="modal" tabindex="-1" id='ctg3'>
+    <div class="modal modal3" tabindex="-1" id='ctg3'>
       <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">

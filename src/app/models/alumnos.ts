@@ -6,6 +6,7 @@ apellidoM: string;
 edad: Number;
 calle: string;
 numero: Number;
+interior: Number;
 colonia: string;
 cp: string;
 celular: Number;
