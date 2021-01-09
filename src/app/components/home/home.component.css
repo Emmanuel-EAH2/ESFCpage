@@ -3,7 +3,7 @@ perspective: 30px -100px;
 }
 
 .boton{
-    background-color: rgb(10, 207, 181); width: 100px;  height: 100px;  margin: 0px 15px; border: 1px solid #f3f4;
+    background-color: #f37c; width: 100px;  height: 100px;  margin: 0px 15px; border: 1px solid #f3f4;
     /* transition-delay: 5s; */
     transition:transform 1s;
 } 
@@ -15,7 +15,7 @@ perspective: 30px -100px;
 
 
 .boton2{
-    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
+    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
     transition:transform 1s;
 }
 .boton2:hover{
@@ -24,7 +24,7 @@ perspective: 30px -100px;
 }
 
 .boton3{
-    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #f3f4;
+    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #f3f4;
     transition:transform 1s;
 }
 .boton3:hover{
@@ -33,7 +33,7 @@ perspective: 30px -100px;
 }
  
 .boton4{
-    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
+    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
     transition:transform 1s;
 }
 .boton4:hover{
@@ -42,7 +42,7 @@ perspective: 30px -100px;
 }
  
 .boton5{
-    background-color:  rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
+    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
     transition:transform 1s;
 }
 .boton5:hover{
@@ -51,7 +51,7 @@ perspective: 30px -100px;
 }
  
 .boton6{
-    background-color: rgb(10, 207, 181); width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
+    background-color: #f37c; width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
     transition:transform 1s;
 }
 .boton6:hover{
@@ -60,13 +60,30 @@ perspective: 30px -100px;
 }
  
 .fondo{
-    background-color: #000;
+    background-image: url(https://i.pinimg.com/originals/3f/62/83/3f62830d1309b41b70507338a9438a90.jpg);
+    /* background-image: url(https://img.freepik.com/foto-gratis/fondo-papel-tapiz-cuboide-abstracto-geometrico-3d_1048-9891.jpg?size=626&ext=jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    /* filter: contrast(1.2); */
+    object-fit: cover;
     animation: opacidad 2.7s both;
 }
 @keyframes opacidad{
     from{
-      opacity: 0;
+        opacity: 0;
     }to{
-      opacity: 1;
+        opacity: 1;
     }
+}
+
+.jumbotron{
+    /* background-image: url(https://img.freepik.com/vector-gratis/resumen-luces-alta-velocidad-camino-fondo_23-2148297492.jpg?size=626&ext=jpg); */
+    background-image: url(https://i.pinimg.com/originals/96/1d/af/961dafb7fc1de0208cc7f3927e31a4b7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    filter: sepia(1);
+    object-fit: cover;
+    margin: 35px 230px;
   }

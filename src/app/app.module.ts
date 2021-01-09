@@ -13,12 +13,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { CoordinadoresComponent } from './components/coordinadores/coordinadores.component';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { AlumnadoComponent } from './components/alumnado/alumnado.component';
+import { ReportesSabatinosComponent } from './components/reportes-sabatinos/reportes-sabatinos.component';
+import { CapitalizadoPipe } from './pipe/capitalizado.pipe';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,13 @@ import { AlumnadoComponent } from './components/alumnado/alumnado.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
     CoordinadoresComponent,
     AlumnosComponent,
     ProfesoresComponent,
     EventosComponent,
-    AlumnadoComponent
+    AlumnadoComponent,
+    ReportesSabatinosComponent,
+    CapitalizadoPipe
   ],
   imports: [
     BrowserModule,

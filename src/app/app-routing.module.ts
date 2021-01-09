@@ -6,19 +6,17 @@ import { CoordinacionComponent } from './components/coordinacion/coordinacion.co
 import { CoordinadoresComponent } from './components/coordinadores/coordinadores.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { MateriasComponent } from './components/materias/materias.component';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
-import { ReporteSabatinoComponent } from './components/reporte-sabatino/reporte-sabatino.component';
+import { ReportesSabatinosComponent } from './components/reportes-sabatinos/reportes-sabatinos.component';
 
 const routes: Routes = [
   {path: 'createCoordinador', component: CoordinadoresComponent},
   {path: 'coordinacion', component: CoordinacionComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
   {path: 'alumno', component: AlumnosComponent},
   {path: 'alumnos', component: AlumnadoComponent},
-  {path: 'reportes', component: ReporteSabatinoComponent},
+  {path: 'reportes', component: ReportesSabatinosComponent},
   {path: 'eventos', component: EventosComponent},
   {path: 'materias', component: MateriasComponent},
   {path: 'profesores', component: ProfesoresComponent},

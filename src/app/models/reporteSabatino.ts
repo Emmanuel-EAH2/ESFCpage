@@ -1,0 +1,31 @@
+export class reporteSabatino{
+secundaria: string;
+fecha: Date;
+lectura: string;
+cita: string;
+horaInicio: string;
+avisosGenerales: string;
+mujeresPrimeroPuntuales: Number;
+mujeresSegundoPuntuales: Number;
+mujeresTerceroPuntuales: Number;
+hombresPrimeroPuntuales: Number;
+hombresSegundoPuntuales: Number;
+hombresTerceroPuntuales: Number;
+mujeresPrimeroInpuntuales: Number;
+mujeresSegundoInpuntuales: Number;
+mujeresTerceroInpuntuales: Number;
+hombresPrimeroInpuntuales: Number;
+hombresSegundoInpuntuales: Number;
+hombresTerceroInpuntuales: Number;
+nombreProfe: string;
+materia: string;
+horarioClaseI: string;
+horarioClaseII: string;
+temaImpartido: string;
+status: string;
+etapa: string;
+actividad: string;
+horaSalida: string;
+observaciones: string;
+nombreCoordi: string;
+}

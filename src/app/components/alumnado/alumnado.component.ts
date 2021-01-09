@@ -25,10 +25,15 @@ export class AlumnadoComponent implements OnInit {
     //   this.alumnos = data.alumnos;
     //   console.log(this.alumnos);
 
-    this.app.getAlumnosActivate().then((data:any)=>{
-      this.alumnos = data
-      console.log(this.alumnos);
-    }).catch((err)=>console.log(err));
+    // this.app.getAlumnosActivate().then((data:any)=>{
+    //   this.alumnos = data
+    //   console.log(this.alumnos);
+    // }).catch((err)=>console.log(err));
+
+    this.app.getAlumnosSI().then((data:any)=>{
+        this.alumnos = data.alumnos;
+        console.log(this.alumnos);
+      }).catch((err)=>console.log(err));
 }
 
   getAlumnoById(){

@@ -13,3 +13,13 @@ h1{
 h1:focus{
     border: hidden;
 }
+
+.fondo{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20201023/pngtree-geometric-abstract-background-geometric-abstract-wallpaper-hd-design-image_432579.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    /* filter: saturate(5) sepia(0.9); */
+    object-fit: cover;
+    animation: opacidad .6s both;
+}

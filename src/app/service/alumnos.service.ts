@@ -8,7 +8,8 @@ import { alumnosModel } from "../models/alumnos";
 export class AlumnosService {
 
   constructor(private http: HttpClient) { }
-
+  
+/**************************FUNCIONES GET***********************/
   getAlumnos(){
     return this.http.get('http://localhost:3003/alumnos').toPromise();
   }
@@ -17,9 +18,14 @@ export class AlumnosService {
      return this.http.get('http://localhost:3003/alumnosAct').toPromise();
    }
 
+   getAlumnosSI(){
+     return this.http.get('http://localhost:3003/AlumnosSantaInes').toPromise();
+   }
+
    getDataById(id: string){
      return this.http.get(`http://localhost:3003/alumnos/${id}`).toPromise();
    }
+/*****************FIN DE LAS FUNCIONES GET**********************/
 
   postAlumnos(alumno: alumnosModel){
     return this.http.post('http://localhost:3003/alumnos', alumno).toPromise();
