@@ -1,0 +1,46 @@
+.fondo{
+    background-image: url(https://static8.depositphotos.com/1154062/1071/v/600/depositphotos_10712741-stock-illustration-white-crumpled-abstract-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    height:max-content;
+    animation: opacidad 2.7s both;
+    height:max-content;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+@keyframes opacidad{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.card{
+    width:  500px;
+    height: 400px;
+    background-image: url(https://images5.alphacoders.com/394/394862.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-x: -90px;
+    background-attachment:scroll;
+    background-origin:border-box;
+    border-radius: 100%;
+    margin: 20px 80px;
+    border: 3px solid #000;
+}
+
+p, h2{
+    font-size: 20px;
+    margin: 50px 10px 0px 30px;
+    color: #000;
+    text-align: center;
+}
+
+button{
+    width: 170px;
+    height: 50px;
+    margin: 20px 160px;
+}

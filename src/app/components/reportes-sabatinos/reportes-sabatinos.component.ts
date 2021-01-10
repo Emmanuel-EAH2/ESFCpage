@@ -3,6 +3,7 @@ import { ReporteSabatinoService } from '../../service/reporte-sabatino.service';
 import { AlumnosService } from '../../service/alumnos.service';
 import { reporteSabatino } from "../../models/reporteSabatino";
 import { NgForm } from '@angular/forms';
+import {  ProfesService} from "../../service/profes.service";
 
 @Component({
   selector: 'app-reportes-sabatinos',
@@ -13,7 +14,7 @@ export class ReportesSabatinosComponent implements OnInit {
   reporte: any;
   reporteNew: reporteSabatino = new reporteSabatino();
   alumnos: any;
-  constructor(private app: ReporteSabatinoService, private appAlum: AlumnosService) { }
+  constructor(private app: ReporteSabatinoService, private appAlum: AlumnosService, private appProf: ProfesService) { }
 
   ngOnInit(): void {
     // this.app.getData().then((data:any)=>{
@@ -21,8 +22,8 @@ export class ReportesSabatinosComponent implements OnInit {
     //   console.log(this.reporte);
     // }).catch((error)=>console.log(error));
 
-    this.app.getDataSI().then((data:any)=>{
-        this.reporte = data;
+    this.appProf.getDataSI().then((data:any)=>{
+        this.reporte = data.Profes;
         console.log(this.reporte);
       }).catch((error)=>console.log(error));
   }

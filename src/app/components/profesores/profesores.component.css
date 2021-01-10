@@ -1,0 +1,20 @@
+@keyframes opacidad{
+    from{
+      opacity: 0;
+    }to{
+      opacity: 1;
+    }
+  }
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    animation: opacidad 2s both;
+    margin: 0;
+    padding: 0;
+}
+ 
+.contenedor{
+    background-color: #aaa;
+    height: 580px;
+} 

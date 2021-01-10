@@ -25,6 +25,19 @@ input{
     border-bottom: 2px solid #666f;
     background-color: transparent;
 }
+ 
+.profes{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 7px 3px;
+  text-decoration: underline;
+}
+p{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 12px 10px 0px 40px;
+}
+ 
 h2{
     margin: 25px 300px;
     text-align: center;

@@ -1,1 +1,30 @@
-<p>profesores works!</p>
+  <div class="contenedor">
+    <div class="d-flex">
+      <button class="m-4" [routerLink]="['/profesoresView']" matTooltip="regresar al registro de profesores" color="warn" mat-raised-button> <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+        <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+      </svg></button>
+        <h2 style="margin: 20px 380px 0px 380px; font-size: 30px;"><strong>Registrar un nuevo profesor</strong></h2>
+    </div>
+             <form autocomplete="off" ngForm="form" #form="ngForm" (ngSubmit)="crearProfe(form)">
+                <div class="jumbotron text-center" style="width: 900px; height: 480px; margin: 10px 250px; border-radius: 50px;">
+                    <div class="d-flex">
+                        <label class="col-3" style="margin: 40px 0px;">Secundaria: </label>
+                        <input type="text" class="form-control col-7 shadow" style="border-radius: 15px; height: 50px; margin:20px 0px; padding-left:10px;" placeholder="Ingresar secundaria" name="secundaria" [(ngModel)]="profeNew.secundaria" #secundaria="ngModel">
+                    </div>
+                    <div class="d-flex"> 
+                        <label class="col-3" style="margin: 40px 0px;">Nombre: </label>
+                       <input type="text" class="form-control col-7 shadow" style="border-radius: 15px; height: 50px; margin:10px 0px; padding-left:10px;" placeholder="Ingresar Nombre del profesor" name="_id" [(ngModel)]="profeNew._id" #_id="ngModel">
+                    </div>
+                      <div class="d-flex">
+                        <label class="col-3" style="margin: 40px 0px;">Materia a impartir: </label>
+                        <input class="form-control col-7 shadow" style="border-radius: 15px; height: 50px; margin:10px 0px; padding-left:10px;"type="text" placeholder="Materia" name="materia" [(ngModel)]="profeNew.materia" #materia="ngModel">
+                    </div>
+                      <div class="d-flex">
+                        <label class="col-3" style="margin: 40px 0px;">horario: </label>
+                        <input type="time" placeholder="Horario" class="form-control col-2 shadow" style="border-radius: 15px; height: 50px; margin:10px 10px; padding-left:10px;" name="horarioClaseI" [(ngModel)]="profeNew.horarioClaseI" #horarioClaseI="ngModel"><input type="time" class="form-control col-2 shadow" style="border-radius: 15px; height: 50px; margin:10px 10px; padding-left:10px;" name="horarioClaseII" [(ngModel)]="profeNew.horarioClaseII" #horarioClaseII="ngModel">
+                    </div>
+                    
+                 <button type="submit" class="btn btn-outline-success col-2 my-4" onclick="document.location.reload()">Enviar</button>
+      </div>
+   </form>  
+</div>

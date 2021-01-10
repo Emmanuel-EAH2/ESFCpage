@@ -1,4 +1,4 @@
-<h2 class="titulo">Alumnos registrados</h2>
+<h2 class="titulo" style="background-color: #8887;">Alumnos registrados</h2>
 <mat-table [dataSource]="alumnos" class="mat-elevation-z8 animacion" style="margin: 3px 5px 0px 2px;">
     <ng-container matColumnDef="hola8">
       <mat-header-cell *matHeaderCellDef style="margin: 0px">Secundaria</mat-header-cell>
@@ -224,7 +224,7 @@
                     <button class="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                   <div class="modal-body">
-                      <H2 class="text-center">¿Seguro que desea eliminarlo?</H2>                               
+                      <h2 class="text-center">¿Seguro que desea eliminarlo?</h2>                               
                   </div>
                   <div class="modal-footer">
                       <button class="btn m-2" mat-raised-button color="warn" (click)="eliminarAlumno()">Eliminar</button>

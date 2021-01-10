@@ -1,1 +1,9 @@
-<p>materias works!</p>
+<div class="fondo">
+    <div class="card shadow" *ngFor="let mate of materia">
+            <h2 style="font-size: 40px;"><strong>{{mate._id}}</strong></h2>
+            <p>{{mate.secundaria._id}}</p>
+            <p>{{mate.profesor._id}}</p>
+            <p>{{mate.secundaria.coordinador}}</p>
+        <button class="btn btn-outline-info">Modificar</button>
+    </div>
+</div>

@@ -1,7 +1,6 @@
 <form #form="ngForm" ngForm="form" class="fondo">
     <h2 style="margin: 0px 300px;">Escuela Secundaria de Formacion Catolica</h2>
-<input type="text" style="margin: 0px 475px;" name="secundaria" [(ngModel)]="reporteNew.secundaria" #secundaria="ngModel">
-    <h2><strong>{{alumnos}}</strong></h2>
+<input type="text" style="margin: 15px 475px;" name="secundaria" [(ngModel)]="reporteNew.secundaria" #secundaria="ngModel" placeholder="secundaria">
    <div class="d-flex" style="float: right;">
        <h3 style="margin: 0px 10px; text-align: center;" class="d-flex">Aguascalientes de la Asuncion a:</h3>
        <input type="date" style="width: 200px;" name="fecha" [(ngModel)]="reporteNew.fecha" #fecha="ngModel">
@@ -53,112 +52,25 @@
  </div>
  
  <h2><strong>Profesores</strong></h2>
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
+ <div style="border: 3px solid #000; height: 100px; margin: 10px;" class="d-flex" *ngFor="let profes of reporte">
      <input type="text" style="width: 50px;" maxlength="1" placeholder="A" name="status" [(ngModel)]="reporteNew.status" #status="ngModel">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor" name="nombreProfe" [(ngModel)]="reporteNew.nombreProfe" #nombreProfe="ngModel">
-     <input type="text" placeholder="Materia" name="materia" [(ngModel)]="reporteNew.materia" #materia="ngModel">
-     <input type="time" placeholder="Horario" style="width: 140px;" name="horarioClaseI" [(ngModel)]="reporteNew.horarioClaseI" #horarioClaseI="ngModel"> -<input type="time" style="width: 140px;" name="horarioClaseII" [(ngModel)]="reporteNew.horarioClaseII" #horarioClaseII="ngModel">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido" name="temaImpartido" [(ngModel)]="reporteNew.temaImpartido" #temaImpartido="ngModel">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
-  
- <div style="border: 3px solid #000; height: 100px; margin: 10px;">
-     <input type="text" style="width: 50px;" maxlength="1" placeholder="A">
-     <input type="text" style="width: 500px; font-size: 15px;" placeholder="Nombre del profesor">
-     <input type="text" placeholder="Materia">
-     <input type="time" placeholder="Horario" style="width: 140px;"> -<input type="time" style="width: 140px;">
-     <input type="text" style="width: 1000px; font-size: 15px; float: right; margin: 7px 3px;" placeholder="Tema o temas impartido">
- </div>
- <small>A: Asistió  F-Faltó  P-Puntual  C-No dio clases  H-No hubo alumnos S-Suplente</small> 
+     <p><strong>Nombre:</strong></p><h3 class="profes">{{profes._id}}</h3>
+     <p><strong>Materia:</strong></p><h3 class="profes">{{profes.materia}}</h3>
+     <p><strong>Horario:</strong></p><h3 class="profes">{{profes.horarioClaseI}}</h3>_
+     <h3 class="profes">{{profes.horarioClaseII}}</h3> 
+     <input type="text"  placeholder="Tema o temas impartido" name="temaImpartido" [(ngModel)]="reporteNew.temaImpartido" #temaImpartido="ngModel">
+    </div>
+
+ <small style="margin-left: 10px;">A: Asistió  F-Faltó  P-Puntual  C-No dio clases  H-No hubo alumnos S-Suplente</small> 
 
  <h2><strong>Ambientación</strong></h2>
  Etapa del proceso grupal:<input type="text" name="etapa" [(ngModel)]="reporteNew.etapa" #etapa="ngModel">
  Actividad:<input type="text" name="actividad" [(ngModel)]="reporteNew.actividad" #actividad="ngModel">
  Hora Salida: <input type="time" style="width: 130px;" name="horaSalida" [(ngModel)]="reporteNew.horaSalida" #horaSalida="ngModel"><br>
- Nombre del coordinador: <input type="text" name="nombreCoordi" [(ngModel)]="reporteNew.nombreCoordi" #nombreCoordi="ngModel">
 
  <h2><strong>Observaciones</strong></h2>
  <textarea style="width: 1000px; height: 500px; margin: 0px 170px; text-align: start; font-size: 19px; font-family:sans-serif;" name="observaciones" [(ngModel)]="reporteNew.observaciones" #observaciones="ngModel"></textarea>
- <button class="btn btn-outline-success col-12" style="border: 7px solid #fff;" (ngSubmit)="enviarReporte(form)">Enviar</button>
+ <button class="btn btn-outline-success col-12" (ngSubmit)="enviarReporte(form)">Enviar</button>
  <h2><strong>"POR UNA PROFUNDA FORMACION MORAL Y CRISTIANA" San J.P.II</strong></h2>
  </div>   
 </form>

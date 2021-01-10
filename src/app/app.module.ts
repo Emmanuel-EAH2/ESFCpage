@@ -20,6 +20,9 @@ import { EventosComponent } from './components/eventos/eventos.component';
 import { AlumnadoComponent } from './components/alumnado/alumnado.component';
 import { ReportesSabatinosComponent } from './components/reportes-sabatinos/reportes-sabatinos.component';
 import { CapitalizadoPipe } from './pipe/capitalizado.pipe';
+import { ProfesoradoComponent } from './components/profesorado/profesorado.component';
+import { VistaReportesComponent } from './components/vista-reportes/vista-reportes.component';
+import { MateriasComponent } from "./components/materias/materias.component";
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { CapitalizadoPipe } from './pipe/capitalizado.pipe';
     EventosComponent,
     AlumnadoComponent,
     ReportesSabatinosComponent,
-    CapitalizadoPipe
+    CapitalizadoPipe,
+    ProfesoradoComponent,
+    VistaReportesComponent,
+    MateriasComponent
   ],
   imports: [
     BrowserModule,

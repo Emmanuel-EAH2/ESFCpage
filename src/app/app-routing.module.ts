@@ -9,11 +9,15 @@ import { HomeComponent } from './components/home/home.component';
 import { MateriasComponent } from './components/materias/materias.component';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
 import { ReportesSabatinosComponent } from './components/reportes-sabatinos/reportes-sabatinos.component';
+import { ProfesoradoComponent } from './components/profesorado/profesorado.component';
+import { VistaReportesComponent } from './components/vista-reportes/vista-reportes.component';
 
 const routes: Routes = [
   {path: 'createCoordinador', component: CoordinadoresComponent},
   {path: 'coordinacion', component: CoordinacionComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'reportesView', component: VistaReportesComponent},
+  {path: 'profesoresView', component: ProfesoradoComponent},
   {path: 'alumno', component: AlumnosComponent},
   {path: 'alumnos', component: AlumnadoComponent},
   {path: 'reportes', component: ReportesSabatinosComponent},

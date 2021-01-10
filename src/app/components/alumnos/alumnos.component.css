@@ -9,7 +9,6 @@
 *{
     box-sizing: border-box;
     font-family: sans-serif;
-    margin-left: 3px;
     animation: opacidad 2s both;
 }
 
@@ -23,7 +22,6 @@ input{
     border-bottom: 2px solid #666f;
     background-color: transparent;
     color:#021;
-    /* filter: saturate(1000%) contrast(10); */
 }
 
 input:hover{
@@ -35,10 +33,20 @@ h2{
     text-align: center;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000
 }
 
 mat-horizontal-stepper{
     background: linear-gradient(#888 5% ,#ddd 18%,#ddd 80%, #777 100%);
     border-radius: 40px;
     margin: 0px 5px;
+}
+.contenedor{
+  height: 685px;
+   background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/01/14/755800652bf194c.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: scroll;
+   /* filter: sepia(1); */
+   object-fit: cover;
 }
