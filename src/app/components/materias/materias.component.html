@@ -2,8 +2,43 @@
     <div class="card shadow" *ngFor="let mate of materia">
             <h2 style="font-size: 40px;"><strong>{{mate._id}}</strong></h2>
             <p>{{mate.secundaria._id}}</p>
-            <p>{{mate.profesor._id}}</p>
+            <p>{{mate.profesor}}</p>
             <p>{{mate.secundaria.coordinador}}</p>
-        <button class="btn btn-outline-info">Modificar</button>
+        <button class="btn btn-outline-info" data-toggle="modal" data-target="#ctg3" mat-raised-button (click)="idActualizar(mate._id)">Modificar</button>
+    </div>
+</div>
+
+<div class="modal modal3" tabindex="-1" id='ctg3'>
+    <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title d-flex" style="font-size: 20px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Modificar materia</h5>
+                  <h3 style="font-size: 26px; margin: 0px 40px">{{idMateriaActualizar}}</h3>
+                  <!-- <button class="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                </div>
+                <div class="modal-body">
+                   <form autocomplete="off" ngForm="form" #form="ngForm"> 
+                            <div class="form-group row"> 
+                                <label class="col-2 col-form-label">Nombre: </label>
+                            <div class="col-8">
+                                <input type="text" class="form-control" placeholder="Nombre del profesor" 
+                                 name="profesor" 
+                                 minlength="7"  required="required" #profesor="ngModel"
+                                 [(ngModel)]="materiaUpd.profesor" 
+                                 [class.is-invalid]="profesor.invalid && profesor.touched" 
+                                 [class.is-valid]="profesor.valid">
+                                <div *ngIf="profesor.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="profesor.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn" mat-raised-button color="warn" (click)="modificar()">modificar</button>
+                        <button class="btn btn-outline-info" onclick="document.location.reload();">Actualizar</button>
+               </form>                              
+            </div>
+        </div>
     </div>
 </div>

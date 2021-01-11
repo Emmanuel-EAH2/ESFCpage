@@ -20,4 +20,8 @@ export class ReporteSabatinoService {
   postData(reporte: reporteSabatino){
    return this.http.post('http://localhost:3003/reportes', reporte).toPromise();
   }
+
+  putData(id: string, reporte: reporteSabatino){
+    return this.http.put(`http://localhost:3003/reportes/${id}`, reporte).toPromise();
+  }
 }

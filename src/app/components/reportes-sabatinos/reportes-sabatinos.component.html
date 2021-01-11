@@ -1,7 +1,12 @@
-<form #form="ngForm" ngForm="form" class="fondo">
+<form #form="ngForm" ngForm="form" class="fondo" (ngSubmit)="enviarReporte(form)">
     <h2 style="margin: 0px 300px;">Escuela Secundaria de Formacion Catolica</h2>
-<input type="text" style="margin: 15px 475px;" name="secundaria" [(ngModel)]="reporteNew.secundaria" #secundaria="ngModel" placeholder="secundaria">
-   <div class="d-flex" style="float: right;">
+    <div class="d-flex">
+        <input type="text" style="margin: 15px 280px 10px 480px;" name="secundaria" [(ngModel)]="reporteNew.secundaria" #secundaria="ngModel" placeholder="secundaria">
+        <button style="width: 80px; height: 35px;" [routerLink]="['/reportesView']" matTooltip="regresar al registro de reportes" color="warn" mat-raised-button> <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+            <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+          </svg></button>   
+    </div>
+<div class="d-flex" style="float: right;">
        <h3 style="margin: 0px 10px; text-align: center;" class="d-flex">Aguascalientes de la Asuncion a:</h3>
        <input type="date" style="width: 200px;" name="fecha" [(ngModel)]="reporteNew.fecha" #fecha="ngModel">
    </div>
@@ -61,7 +66,7 @@
      <input type="text"  placeholder="Tema o temas impartido" name="temaImpartido" [(ngModel)]="reporteNew.temaImpartido" #temaImpartido="ngModel">
     </div>
 
- <small style="margin-left: 10px;">A: Asistió  F-Faltó  P-Puntual  C-No dio clases  H-No hubo alumnos S-Suplente</small> 
+ <small style="margin-left: 10px;">A: Asistió  F-Fñaltó  P-Puntual  C-No dio clases  H-No hubo alumnos S-Suplente</small> 
 
  <h2><strong>Ambientación</strong></h2>
  Etapa del proceso grupal:<input type="text" name="etapa" [(ngModel)]="reporteNew.etapa" #etapa="ngModel">
@@ -70,7 +75,7 @@
 
  <h2><strong>Observaciones</strong></h2>
  <textarea style="width: 1000px; height: 500px; margin: 0px 170px; text-align: start; font-size: 19px; font-family:sans-serif;" name="observaciones" [(ngModel)]="reporteNew.observaciones" #observaciones="ngModel"></textarea>
- <button class="btn btn-outline-success col-12" (ngSubmit)="enviarReporte(form)">Enviar</button>
+ <button class="btn btn-outline-success col-12">Enviar</button>
  <h2><strong>"POR UNA PROFUNDA FORMACION MORAL Y CRISTIANA" San J.P.II</strong></h2>
  </div>   
 </form>

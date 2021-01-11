@@ -32,11 +32,16 @@
     border: 3px solid #000;
 }
 
+
 p, h2{
     font-size: 20px;
     margin: 50px 10px 0px 30px;
     color: #000;
     text-align: center;
+}
+
+p:hover, h2:hover{
+    color: #fff;
 }
 
 button{
