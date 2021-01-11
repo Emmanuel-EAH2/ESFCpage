@@ -1,0 +1,54 @@
+@keyframes opacidad{
+    from{
+      opacity: 0;
+    }to{
+      opacity: 1;
+    }
+  }
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    animation: opacidad 2s both;
+    margin: 0;
+    padding: 0;
+}
+
+mat-expansion-panel{
+    padding: 18px;
+    margin: 5px;
+}
+
+h3{
+    font-size: 14px;
+    color: black;
+    margin: 2px;
+}
+
+p{
+ font-size: 14px;
+ margin: 6px 5px 0px 5px;
+}
+
+thead{
+    font-size: 20px;
+    color: black;
+    padding: 6px;
+    text-align: center;
+    border: 2px solid #000;
+}
+tbody{
+    font-size: 17px;
+    color: darkgray;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #000;
+}
+
+td{
+    border: 2px solid #000;
+ }
+
+.btn{
+  height: 35px;
+ }

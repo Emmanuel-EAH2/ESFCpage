@@ -1,0 +1,48 @@
+<div class="fondo">
+    <div class="d-flex" style="margin: 10px 110px;">
+        <button [routerLink]="['/profesores']" matTooltip="Agregar un profesor" mat-fab style="margin: 0px 400px 10px 0px; background: transparent; width: 80px; height: 80px;" >
+            <mat-icon style="font-size: 40px; margin: 0px 14px 20px 0px;">
+            person_add
+        </mat-icon></button>
+        <h2>PROFESORES</h2><br>
+    </div>
+    <div class="contenedor">
+        <div class="card" *ngFor="let profe of profesor">
+          <div class="cabecera">
+            {{profe._id}}
+          </div>
+            <hr>
+            <div class="cuerpo">
+               <p>Secundaria: {{profe.secundaria._id}}</p><br>
+               <p>Materia que imparte: {{profe.materia}}</p><br> 
+               <p>Horario de clase de:<br> 
+                   {{profe.horarioClaseI}} a {{profe.horarioClaseII}}
+                </p> 
+            </div>
+            <hr>
+            <div class="botones">
+                <button class="btn col-5 m-2" mat-raised-button color="accent" (click)="idActualizar(profe._id)" data-toggle="modal" data-target="#ctg3">modificar</button>
+                <button class="btn col-3 m-2" mat-raised-button color="warn">borrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal3" tabindex="-1" id='ctg3'>
+      <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" style="font-size: 26px; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">Eliminar alumno</h5>
+                    <button class="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                  <div class="modal-body">
+                      <h2>Este es de prueba</h2>                              
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn m-2" mat-raised-button color="warn" (click)="modifcar()">Guardar Cambios</button>
+                      <button class="btn btn-outline-info" onclick="document.location.reload();" matTooltip="recarga la pagina">Actualizar</button>
+                  </div>
+              </div>
+      </div>
+      </div>

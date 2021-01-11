@@ -1,0 +1,75 @@
+<mat-accordion *ngFor="let report of reporte; let i = index">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              <p>{{report.secundaria._id}}</p> <p>{{i}}</p>                                                               
+            </mat-panel-title>
+            <mat-panel-description>
+               <h3>fecha del reporte:</h3> <p>{{report.fecha | date}}</p>
+               <h3>lectura:</h3>  <p>{{report.lectura}}</p>
+               <h3>cita:</h3>  <p>{{report.cita}}</p>
+               <h3>hora que inicio:</h3>  <p>{{report.horaInicio}}</p>
+               <h3>hora que termino:</h3>  <p>{{report.horaSalida}}</p>                                                               
+            </mat-panel-description>  
+        </mat-expansion-panel-header>
+        <table>
+            <thead>
+               <td>avisos</td>
+               <td>observaciones</td>
+               <td>actividades</td>
+            </thead>
+            <tbody>
+                <td>{{report.avisosGenerales}}</td>
+                <td>{{report.observaciones}}</td>
+                <td>{{report.actividad}}</td>
+            </tbody>
+        </table>
+
+        <p>Total de alumnos recibidos (Puntuales): </p>
+        <table>
+            <thead>
+               <td> 1ero</td>
+               <td> 2do</td>
+               <td> 3ero</td>
+               <td> Mujeres</td>
+               <td> Hombres</td>
+               <td>Total</td>
+            </thead>
+            <tbody>
+                <td>{{report.mujeresPrimeroPuntuales+report.hombresPrimeroPuntuales}}</td>
+                <td>{{report.mujeresSegundoPuntuales+report.hombresSegundoPuntuales}}</td>
+                <td>{{report.mujeresTerceroPuntuales+report.hombresTerceroPuntuales}}</td>
+                <td>{{report.mujeresTerceroPuntuales+report.mujeresPrimeroPuntuales+report.mujeresSegundoPuntuales}}</td>
+                <td>{{report.hombresPrimeroPuntuales+report.hombresSegundoPuntuales+report.hombresTerceroPuntuales}}</td>
+                <td>{{report.mujeresTerceroPuntuales+report.mujeresPrimeroPuntuales+report.mujeresSegundoPuntuales+report.hombresPrimeroPuntuales+report.hombresSegundoPuntuales+report.hombresTerceroPuntuales}}</td>
+            </tbody>
+        </table> 
+ 
+
+        <p>Total de alumnos recibidos (Asistieron): </p>
+        <table>
+            <thead>
+               <td>1ero</td>
+               <td>2do</td>
+               <td>3ero</td>
+               <td>Mujeres</td>
+               <td>Hombres</td>
+               <td>Total</td>
+            </thead>
+            <tbody>
+                <td>{{report.mujeresPrimeroInpuntuales+report.hombresPrimeroInpuntuales}}</td>
+                <td>{{report.mujeresSegundoInpuntuales+report.hombresSegundoInpuntuales}}</td>
+                <td>{{report.mujeresTerceroInpuntuales+report.hombresTerceroInpuntuales}}</td>
+                <td>{{report.mujeresTerceroInpuntuales+report.mujeresPrimeroInpuntuales+report.mujeresSegundoInpuntuales}}</td>
+                <td>{{report.hombresPrimeroInpuntuales+report.hombresSegundoInpuntuales+report.hombresTerceroInpuntuales}}</td>
+                <td>{{report.mujeresTerceroInpuntuales+report.mujeresPrimeroInpuntuales+report.mujeresSegundoInpuntuales+report.hombresPrimeroInpuntuales+report.hombresSegundoInpuntuales+report.hombresTerceroInpuntuales}}</td>
+            </tbody>
+        </table> 
+ 
+          <mat-action-row>
+            <button class="btn" color="warn" mat-flat-button>modificar</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+ 
+<button class="btn btn-outline-info col-12" style="border: 5px solid #fff;" [routerLink]="['/reportes']" >agregar reporte</button>

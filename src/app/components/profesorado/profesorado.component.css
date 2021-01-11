@@ -1,0 +1,49 @@
+@keyframes opacidad{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.card{
+    margin: 20px 5px 5px 10px;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family:cursive, 'Arial';
+    background-color: transparent;
+    color: #000;
+    margin-top: 0px;
+    border: transparent;
+}
+
+.cabecera{
+text-align: center;
+}
+
+.cuerpo{
+    height: 150px;
+}
+
+.contenedor{
+    display: flex;
+    margin-left: 60px;
+    flex-wrap: wrap;
+}
+
+.fondo{
+    background-image: url(https://fondosmil.com/fondo/27545.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    padding-top: 50px;
+    height:max-content;
+    animation: opacidad 2.7s both;
+}
+
+h2{
+    text-align: center;
+    font-size: 35px;
+}
