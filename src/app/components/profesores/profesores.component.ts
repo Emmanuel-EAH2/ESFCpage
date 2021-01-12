@@ -21,5 +21,4 @@ export class ProfesoresComponent implements OnInit {
       console.log(this.nuevoProfe);
     }).catch((error)=>console.log(error));
   }
-
 }

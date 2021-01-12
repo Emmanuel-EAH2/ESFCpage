@@ -51,12 +51,12 @@ h2{
 }
 
 .titulo{
-  margin: 10px 270px;
+  margin: 10px 420px;
     text-align: center;
     font-size: 40px;
     font-family:Arial, Helvetica, sans-serif;
-    letter-spacing: 1.2px;
-    color: #ff017fff;
+    letter-spacing: 1px;
+    color: #ff017fcc;
 }
 mat-header-cell{
   font-size: 18px;
@@ -76,3 +76,23 @@ mat-cell:hover{
 .animacion{
   animation: opacidad 2.5s both;
 }
+
+mat-sidenav-container{
+  background-color: #777;
+  
+  }
+  
+  mat-sidenav,
+  mat-sidenav-content{
+  padding: 1px;
+  }
+  
+  mat-sidenav{
+    /* background-color: lightcoral; */
+    width: 120px;
+  }
+  .acomodo{
+    margin: 10px;
+    width: 71px;
+    height: 70px;
+  }

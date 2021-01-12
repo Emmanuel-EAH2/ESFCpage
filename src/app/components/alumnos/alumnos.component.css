@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
     animation: opacidad 2s both;
+    color: #000;
 }
 
 input{
@@ -33,7 +34,9 @@ h2{
     text-align: center;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #000
+}
+p{
+  color:#000;
 }
 
 mat-horizontal-stepper{
@@ -50,3 +53,23 @@ mat-horizontal-stepper{
    /* filter: sepia(1); */
    object-fit: cover;
 }
+
+mat-sidenav-container{
+  background-color: #777;
+  
+  }
+  
+  mat-sidenav,
+  mat-sidenav-content{
+  padding: 1px;
+  }
+  
+  mat-sidenav{
+    /* background-color: lightcoral; */
+    width: 120px;
+  }
+  .acomodo{
+    margin: 10px;
+    width: 71px;
+    height: 70px;
+  }

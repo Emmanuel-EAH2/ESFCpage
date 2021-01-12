@@ -1,5 +1,5 @@
 export class alumnosModel{
-secundaria: string;
+secundaria: 'Santa Ines';
 nombre: string;
 apellidoP: string;
 apellidoM: string;

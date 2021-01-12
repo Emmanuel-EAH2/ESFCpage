@@ -15,6 +15,27 @@
 }
  
 .contenedor{
-    background-color: #aaa;
     height: 580px;
-} 
+    border-radius: 50px;
+    margin: 0%;
+}
+
+mat-sidenav-container{
+background-color: #777;
+
+}
+
+mat-sidenav,
+mat-sidenav-content{
+padding: 1px;
+}
+
+mat-sidenav{
+  /* background-color: lightcoral; */
+  width: 120px;
+}
+.acomodo{
+  margin: 10px;
+  width: 71px;
+  height: 70px;
+}

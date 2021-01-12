@@ -19,13 +19,25 @@ mat-expansion-panel{
     margin: 5px;
 }
 
+mat-expansion-panel-header{
+display: flex;
+flex-wrap: wrap;
+font-size: 30px;
+}
+
+mat-panel-description{
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 30px;
+}
+
 h3{
-    font-size: 14px;
+    font-size: 20px;
     color: black;
     margin: 2px;
 }
 
-p{
+.LA{
  font-size: 14px;
  margin: 6px 5px 0px 5px;
 }
@@ -33,7 +45,7 @@ p{
 thead{
     font-size: 20px;
     color: black;
-    padding: 6px;
+    padding: 20px;
     text-align: center;
     border: 2px solid #000;
 }
@@ -41,7 +53,7 @@ tbody{
     font-size: 17px;
     color: darkgray;
     text-align: center;
-    padding: 5px;
+    padding: 35px;
     border: 2px solid #000;
 }
 
@@ -52,3 +64,38 @@ td{
 .btn{
   height: 35px;
  }
+
+ .alumnos{
+   margin: 1px 0px;
+   padding: 20px;
+   font-size: 20px;
+ }
+
+ .titulo{
+   color:goldenrod;
+   font-size: 24px;
+   text-align: center;
+   border-top: 2px solid #333;
+   padding-top: 9px;
+   margin-bottom: 5px;
+ }
+
+ mat-sidenav-container{
+  background-color: #777;
+  
+  }
+  
+  mat-sidenav,
+  mat-sidenav-content{
+  padding: 1px;
+  }
+  
+  mat-sidenav{
+    /* background-color: lightcoral; */
+    width: 120px;
+  }
+  .acomodo{
+    margin: 10px;
+    width: 71px;
+    height: 70px;
+  }

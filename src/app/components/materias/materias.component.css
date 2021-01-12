@@ -6,7 +6,6 @@
     height:max-content;
     animation: opacidad 2.7s both;
     height:max-content;
-
     display: flex;
     flex-wrap: wrap;
 }
@@ -49,3 +48,24 @@ button{
     height: 50px;
     margin: 20px 160px;
 }
+mat-sidenav-container{
+    background-color: #777;
+    
+    }
+    
+    mat-sidenav{
+      /* background-color: lightcoral; */
+      width: 120px;
+    }
+    .acomodo{
+      margin: 10px;
+      width: 71px;
+      height: 70px;
+    }
+
+    #titulo{
+        margin: 0;
+        margin-top: 35px;
+        font-size: 30px;
+        font-family: sans-serif;
+    }

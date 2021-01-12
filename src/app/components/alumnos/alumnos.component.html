@@ -1,170 +1,220 @@
-<div class="contenedor">
-        <div class="d-flex">
-            <button class="m-4" [routerLink]="['/alumnos']" matTooltip="regresar a los alumnos" color="warn" mat-raised-button> <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
-                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
-              </svg></button>
-              <h2>Escuela Secundaria de Formacion Catolica (Inscripción)</h2>
-        </div>
-    <form autocomplete="off" ngForm="form" #form="ngForm" (ngSubmit)="crearAlumno(form)">
-          <mat-horizontal-stepper linear color="warn">
-              <mat-step label="Datos personales">
-        <input type="text" placeholder="Nombre de la Secundaria" style="width: 450px; margin: 0px 0px 10px 450px" name="secundaria" #secundaria="ngModel" [(ngModel)]="alumnoNew.secundaria">
-        <h4 style="text-align: center;">Solicitud de inscripcion al ciclo <strong>2021-2022</strong></h4>
-        <hr>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" #sidenav>
+        <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Eventos" [routerLink]="['/eventos']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-calendar-plus-fill" viewBox="0 0 16 16" style="margin: 0px 10px;">
+              <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM8.5 8.5V10H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V11H6a.5.5 0 0 1 0-1h1.5V8.5a.5.5 0 0 1 1 0z"/>
+            </svg>
+      </button>
     
-          
-        <input type="text" placeholder="Escibe tu Apellido Paterno" name="apellidoP" [(ngModel)]="alumnoNew.apellidoP" #apellidoP="ngModel" required>
-        <input type="text" placeholder="Escibe tu Apellido Materno" name="apellidoM" [(ngModel)]="alumnoNew.apellidoM" #apellidoM="ngModel" required>
-        <input type="text" placeholder="Escibe tu Nombre" minlength="4" name="nombre" [(ngModel)]="alumnoNew.nombre" #nombre="ngModel" required>
-                <input type="number" min="12" max="18" placeholder="Edad" style="width: 65px; margin:0px 0px 0px 0px;" name="edad" [(ngModel)]="alumnoNew.edad" #edad="ngModel" required>
+      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Alumnos" [routerLink]="['/alumnos']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-emoji-sunglasses" viewBox="0 0 16 16">
+              <path d="M4.968 9.75a.5.5 0 1 0-.866.5A4.498 4.498 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.498 3.498 0 0 1 8 11.5a3.498 3.498 0 0 1-3.032-1.75zM7 5.116V5a1 1 0 0 0-1-1H3.28a1 1 0 0 0-.97 1.243l.311 1.242A2 2 0 0 0 4.561 8H5a2 2 0 0 0 1.994-1.839A2.99 2.99 0 0 1 8 6c.393 0 .74.064 1.006.161A2 2 0 0 0 11 8h.438a2 2 0 0 0 1.94-1.515l.311-1.242A1 1 0 0 0 12.72 4H10a1 1 0 0 0-1 1v.116A4.22 4.22 0 0 0 8 5c-.35 0-.69.04-1 .116z"/>
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-1 0A7 7 0 1 0 1 8a7 7 0 0 0 14 0z"/>
+            </svg>
+      </button>
+      
+      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Reporte sabatino" [routerLink]="['/reportesView']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+              <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+            </svg>
+      </button>
+    
+      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Profesores" [routerLink]="['/profesoresView']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+            </svg>
+      </button>
+      
+      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Materias" [routerLink]="['/materias']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+              <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
+      </button>
+      
+      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Coordinadores" [routerLink]="['/createCoordinador']">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+              <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+            </svg>
+      </button>
+      </mat-sidenav>
+      <mat-sidenav-content>
+          <div class="contenedor">
+                  <div class="d-flex">
+                    <button (click)="sidenav.toggle()" mat-icon-button style="background-color: transparent; width: 40px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                      </svg></button>
+                      <h2>Escuela Secundaria de Formacion Catolica (Inscripción)</h2>
+                      <button class="m-4" [routerLink]="['/alumnos']" matTooltip="regresar a los alumnos" color="warn" mat-raised-button> <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                          <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                        </svg></button>
+                  </div>
+              <form autocomplete="off" ngForm="form" #form="ngForm" (ngSubmit)="crearAlumno(form)">
+                    <mat-horizontal-stepper linear color="warn">
+                        <mat-step label="Datos personales">
+                  <input type="text" placeholder="Nombre de la Secundaria" style="width: 450px; margin: 0px 0px 10px 450px" name="secundaria" #secundaria="ngModel" [(ngModel)]="alumnoNew.secundaria">
+                  <h4 style="text-align: center;">Solicitud de inscripcion al ciclo <strong>2021-2022</strong></h4>
+                  <hr>
               
-                <input type="text" placeholder="Calle" style="margin: 10px 0px 3px 5px;" name="calle" [(ngModel)]="alumnoNew.calle" #calle="ngModel" required>
-                <input type="number" min="1" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="numero" [(ngModel)]="alumnoNew.numero" #numero="ngModel" required>
-                <input type="text" maxlength="5" placeholder="int" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="interior" [(ngModel)]="alumnoNew.interior" #interior="ngModel" required>
-                <input type="text" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="colonia" [(ngModel)]="alumnoNew.colonia" #colonia="ngModel" required>
-                <input type="number" min="1" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="cp" [(ngModel)]="alumnoNew.cp" #cp="ngModel" required>
-              
-                <input type="number" lang="12"  placeholder="Celular" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="celular" [(ngModel)]="alumnoNew.celular" #celular="ngModel" required>
-                <input type="number" lang="12"  placeholder="Télefono" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="telefono" [(ngModel)]="alumnoNew.telefono" #telefono="ngModel" required>
-                <input type="email" style="margin: 10px 0px 3px 5px;" placeholder="correo" name="correo" [(ngModel)]="alumnoNew.correo" #corre="ngModel">
-              
-                <input type="date"  placeholder="Fecha de Nacimiento" style="width: 180px;" name="fec_nac" [(ngModel)]="alumnoNew.fec_nac" #fec_nac="ngModel" required matTooltip="Fecha de Nacimiento">
-              
-                <input type="text"  placeholder="Lugar de nacimiento: Aguascalientes" name="lugar_nac" [(ngModel)]="alumnoNew.lugar_nac" #lugar_nac="ngModel" required>
-              <hr>  
-              <button mat-raised-button matStepperNext color="warn">Siguiente</button>    
-            </mat-step>
-        <mat-step label="Estudios realizados para la vida laical">
-            <p>
-                Primaria: <input type="number" style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="6" name="primaria" [(ngModel)]="alumnoNew.primaria" #primaria="ngModel" required>año. |   
-                
-                Secundaria: <input type="number" style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="3" name="secundariaEscolar" [(ngModel)]="alumnoNew.secundariaEscolar" #secundariaEscolar="ngModel" required>año. | 
-                
-                Bachillerato: <input type="number"style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="3" name="bachillerato" [(ngModel)]="alumnoNew.bachillerato" #bachillerato="ngModel" required>  
-                
-                Otro(especifica): <input type="text"style=" width: 500px;padding: 0px; margin: 0px; font-size: 15px; height: 20px;" name="otroTipo" [(ngModel)]="alumnoNew.otroTipo" #otroTipo="ngModel" required></p>
-        
-                <h4 style="margin: 0;"><strong>Estudios acutales</strong></h4>
-            <p>
-                Instituto: <input type="text" style=" width: 630px;padding: 0px; margin: 3px 3px; font-size: 15px; height: 30px;" name="instituo" [(ngModel)]="alumnoNew.instituo" #instituo="ngModel" required>
-                
-                Especialidad: <input type="text" style=" padding: 0px; margin: 3px 3px;; font-size: 15px; height: 30px;" name="especialidad" [(ngModel)]="alumnoNew.especialidad" #especialidad="ngModel" required><br>
-                
-                Grado: <input type="number" min="1" max="6" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" name="grado" [(ngModel)]="alumnoNew.grado" #grado="ngModel" required>
-                Grupo: <input type="text" min="1" max="6" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" name="grupo" [(ngModel)]="alumnoNew.grupo" #grupo="ngModel" required>
-                Hora de entrada:<input type="text" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" min="1" max="12" name="horaEntrada" [(ngModel)]="alumnoNew.horaEntrada" #horaEntrada="ngModel" required> 
-                Hora de salida: <input type="text" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" min="1" max="12" name="horaSalida" [(ngModel)]="alumnoNew.horaSalida" #horaSalida="ngModel" required>
-            </p>
-        <hr>
-        <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
-        <button mat-raised-button matStepperNext color="warn">Siguiente</button>
-        </mat-step>
-        <mat-step label="Estudios realizados para la vida Eterna">
-            <div class="d-flex">
-                <p>
-                    Grado de estudios al que llegaste en tu ultimo grado de catesismo(primaria): <input type="number" style="width: 30px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="4" max="9" name="catesismo" [(ngModel)]="alumnoNew.catesismo" #catesismo="ngModel" required>
-                
-                    Otros Estudios personales: <input type="text" style="width: 300px; padding: 0; margin: 0px; font-size: 15px; height: 25px;" name="otroTipoCate" [(ngModel)]="alumnoNew.otroTipoCate" #otroTipoCate="ngModel" required><br>
-                
-                   <strong>Sacramentos Recibidos: </strong> 
-                    <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Bautismo</label>
-                    <input type="radio" class="form-check-input" type="radio" style="width: 20px; height: 20px; margin: 10px 20px 0px 1px;" name="bautismo" [(ngModel)]="alumnoNew.bautismo" #bautismo="ngModel" value="bautismo">
-                    <label style="margin: 10px 0 0 25px;" class="form-check-label" for="inlineRadio2">Confirmacion</label>
-                    <input type="radio" class="form-check-input" type="radio" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="confirmacion" [(ngModel)]="alumnoNew.confirmacion" #confirmacion="ngModel" value="confirmacion">
-                    <label style="margin: 10px 0 0 25px;" class="form-check-label" for="inlineRadio2">Eucaristia</label>
-                    <input type="radio" class="form-check-input" type="radio" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="eucaristia" [(ngModel)]="alumnoNew.eucaristia" #eucaristia="ngModel" value="eucaristia"><br>
                     
-                    ¿Ya sabes cual es tu vocacion en la vida?(en caso de que si,especifica): <input type="text" style="padding: 0; margin: 0px; font-size: 15px; height: 25px;" name="vocacion" [(ngModel)]="alumnoNew.vocacion" #vocacion="ngModel" value="">    
-                </p>
-                </div>
-                    <hr>
-                    <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
-                    <button mat-raised-button matStepperNext color="warn">Siguiente</button>
-        </mat-step>     
-        <mat-step label="Ocupaciones diversas" completed=false optional>
-            <p>
-                Escribe el nombre de las agrupacioes de cualquier tipo a las que pertenezcas(religiosas, deportivas, politicas, sociales, etc.), asi como el cargo que ocupas: <input type="text" style="width: 600px; padding: 0px 0px 0px 0px; margin: 0px; font-size: 15px; height: 40px;" name="agrupacion" [(ngModel)]="alumnoNew.agrupacion" #agrupacion="ngModel" required>
-            </p>
-         <div>
-            <p> 
-                <b>Lugar de trabajo</b><br>
-                <input type="text" placeholder="Calle" style=" margin: 0; width: 450px;" name="calleTrabajo" [(ngModel)]="alumnoNew.calleTrabajo" #calleTrabajo="ngModel">
-                <input type="number" min="1" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="numeroTrabajo" [(ngModel)]="alumnoNew.numeroTrabajo" #numeroTrabajo="ngModel">
-                <input type="text" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="coloniaTrabajo" [(ngModel)]="alumnoNew.coloniaTrabajo" #coloniaTrabajo="ngModel">
-                <input type="number" min="1" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="cpTrabajo" [(ngModel)]="alumnoNew.cpTrabajo" #cpTrabajo="ngModel">
-                <input type="text" placeholder="Nombre de le Empresa" style=" margin: 0" name="nombreTrabajo" [(ngModel)]="alumnoNew.nombreTrabajo" #nombreTrabajo="ngModel">
-                <input type="text" style="width:200px;" placeholder="Horario: ejemplo: 8:00a.m.-6:00p.m" style=" margin: 0" name="" [(ngModel)]="alumnoNew.horarioTrabajo" #horarioTrabajo="ngModel">
-                <input type="text" style="width:1000px;" placeholder="Tareas que realiza" style=" margin: 0" name="tareasTrabajo" [(ngModel)]="alumnoNew.tareasTrabajo" #tareasTrabajo="ngModel">
-            </p>
-        </div> 
-        <hr>
-        <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
-        <button mat-raised-button matStepperNext color="warn">Siguiente</button>
-        </mat-step> 
-        <mat-step label="Datos Familiares">
-            <p>
-                <h2></h2>
-                <div class="d-flex">
-                Papá: <input type="text" placeholder="Apellido Paterno" style=" margin: 0;" name="apellidoPM" [(ngModel)]="alumnoNew.apellidoPM" #apellidoPM="ngModel" required>
-                <input type="text" placeholder="Apellido Materno" name="apellidoPP" [(ngModel)]="alumnoNew.apellidoPP" #apellidoPP="ngModel" required>
-                <input type="text" placeholder="Nombre" name="nombreP" [(ngModel)]="alumnoNew.nombreP" #nombreP="ngModel" required>
-                   <p style="margin: 10px 0px;">vive:</p>
-                    <div>
-                        <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
-                        <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivep" [(ngModel)]="alumnoNew.vivep" #vivep="ngModel" value="Si" checked required>
-                    </div>
-                    <div>
-                        <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                        <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivep" [(ngModel)]="alumnoNew.vivep" #vivep="ngModel" value="No" required>
-                    </div>
-                </div>
-        
-                <input type="text" placeholder="Ocupacion" name="ocupacionP" [(ngModel)]="alumnoNew.ocupacionP" #ocupacionP="ngModel" required><br><br>
-               
-                <div class="d-flex">
-                    Mamá: <input type="text" placeholder="Apellido Paterno" style=" margin: 0;" name="apellidoMP" [(ngModel)]="alumnoNew.apellidoMP" #apellidoMP="ngModel" required>
-                    <input type="text" placeholder="Apellido Materno" name="apellidoMM" [(ngModel)]="alumnoNew.apellidoMM" #apellidoMM="ngModel" required>
-                    <input type="text" placeholder="Nombre" name="nombreM" [(ngModel)]="alumnoNew.nombreM" #nombreM="ngModel" required>
-                    <p style="margin: 10px 0px;">vive:</p>
-                        <div>
-                            <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
-                            <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivem" [(ngModel)]="alumnoNew.vivem" #vivem="ngModel" value="Si" checked required>
-                        </div>
-                        <div>
-                            <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                            <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivem" [(ngModel)]="alumnoNew.vivem" #vivem="ngModel" value="No" required>
-                        </div>
-                </div>
-                <input type="text" placeholder="Ocupacion" name="ocupacionM" [(ngModel)]="alumnoNew.ocupacionM" #ocupacionM="ngModel" required><br><br>
-                <div class="d-flex">
-               <strong style="margin: 0px 0px 0px 150px;">casados por la Iglesia Católica:</strong>    
-                 <div>
-                    <label style="margin:0px 1px;" class="form-check-label" for="inlineRadio2">Si</label>
-                    <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesia" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesia="ngModel" value="Si" checked>
-                </div>
-                <div>
-                    <label style="margin:0px 0px 0px 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                    <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesia" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesia="ngModel" value="No">
-                </div>
-                   <p style="margin: 0px 0px 0px 90px;"><strong> casados al civil:</strong></p>
-                    <div>
-                        <label style="margin:0px 1px;" class="form-check-label" for="inlineRadio2">Si</label>
-                        <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilSi" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivil="ngModel"  value="Si" checked>
-                    </div>
-                    <div>
-                        <label style="margin:0px 0px 0px 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                        <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilNo" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivil="ngModel"  value="No">
-                    </div><br>
-                </div>
-            
-                numero de hermanos(sin incluirte): <input type="number" style=" margin: 0; width: 50px;" name="numHermanos" [(ngModel)]="alumnoNew.numHermanos" #numHermanos="ngModel"> Edades(de menor a mayor sin incluirte): <input type="numer" style=" margin: 0; width: 300px;" name="edades" [(ngModel)]="alumnoNew.edades" #edades="ngModel" required>
-                <div class="d-flex">    
-                    <button mat-raised-button matStepperPrevious color="accent" style="width: 150px; height:40px; margin-top:20px;">Regresar</button>
-                    <button class="btn btn-outline-success col-8" type="submit" style="margin: 20px 110px;" onclick="document.location.reload();">Enviar</button>
-                </div>
-                <h2 style="margin: 0px;">"Por una profunda formacion moral y cristiana" SJPII</h2>
-            </mat-step>
-        </mat-horizontal-stepper>
-    </form>
-    </div>            
+                  <input type="text" placeholder="Escibe tu Apellido Paterno" name="apellidoP" [(ngModel)]="alumnoNew.apellidoP" #apellidoP="ngModel" required>
+                  <input type="text" placeholder="Escibe tu Apellido Materno" name="apellidoM" [(ngModel)]="alumnoNew.apellidoM" #apellidoM="ngModel" required>
+                  <input type="text" placeholder="Escibe tu Nombre" minlength="4" name="nombre" [(ngModel)]="alumnoNew.nombre" #nombre="ngModel" required>
+                          <input type="number" min="12" max="18" placeholder="Edad" style="width: 65px; margin:0px 0px 0px 0px;" name="edad" [(ngModel)]="alumnoNew.edad" #edad="ngModel" required>
+                        
+                          <input type="text" placeholder="Calle" style="margin: 10px 0px 3px 5px;" name="calle" [(ngModel)]="alumnoNew.calle" #calle="ngModel" required>
+                          <input type="number" min="1" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="numero" [(ngModel)]="alumnoNew.numero" #numero="ngModel" required>
+                          <input type="text" maxlength="5" placeholder="int" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="interior" [(ngModel)]="alumnoNew.interior" #interior="ngModel" required>
+                          <input type="text" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="colonia" [(ngModel)]="alumnoNew.colonia" #colonia="ngModel" required>
+                          <input type="number" min="1" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="cp" [(ngModel)]="alumnoNew.cp" #cp="ngModel" required>
+                        
+                          <input type="number" lang="12"  placeholder="Celular" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="celular" [(ngModel)]="alumnoNew.celular" #celular="ngModel" required>
+                          <input type="number" lang="12"  placeholder="Télefono" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="telefono" [(ngModel)]="alumnoNew.telefono" #telefono="ngModel" required>
+                          <input type="email" style="margin: 10px 0px 3px 5px;" placeholder="correo" name="correo" [(ngModel)]="alumnoNew.correo" #corre="ngModel">
+                        
+                          <input type="date"  placeholder="Fecha de Nacimiento" style="width: 180px;" name="fec_nac" [(ngModel)]="alumnoNew.fec_nac" #fec_nac="ngModel" required matTooltip="Fecha de Nacimiento">
+                        
+                          <input type="text"  placeholder="Lugar de nacimiento: Aguascalientes" name="lugar_nac" [(ngModel)]="alumnoNew.lugar_nac" #lugar_nac="ngModel" required>
+                        <hr>  
+                        <button mat-raised-button matStepperNext color="warn">Siguiente</button>    
+                      </mat-step>
+                  <mat-step label="Estudios realizados para la vida laical">
+                      <p>
+                          Primaria: <input type="number" style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="6" name="primaria" [(ngModel)]="alumnoNew.primaria" #primaria="ngModel" required>año. |   
+                          
+                          Secundaria: <input type="number" style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="3" name="secundariaEscolar" [(ngModel)]="alumnoNew.secundariaEscolar" #secundariaEscolar="ngModel" required>año. | 
+                          
+                          Bachillerato: <input type="number"style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="3" name="bachillerato" [(ngModel)]="alumnoNew.bachillerato" #bachillerato="ngModel" required>  
+                          
+                          Otro(especifica): <input type="text"style=" width: 500px;padding: 0px; margin: 0px; font-size: 15px; height: 20px;" name="otroTipo" [(ngModel)]="alumnoNew.otroTipo" #otroTipo="ngModel" required></p>
+                  
+                          <h4 style="margin: 0;"><strong>Estudios acutales</strong></h4>
+                      <p>
+                          Instituto: <input type="text" style=" width: 630px;padding: 0px; margin: 3px 3px; font-size: 15px; height: 30px;" name="instituo" [(ngModel)]="alumnoNew.instituo" #instituo="ngModel" required>
+                          
+                          Especialidad: <input type="text" style=" padding: 0px; margin: 3px 3px;; font-size: 15px; height: 30px;" name="especialidad" [(ngModel)]="alumnoNew.especialidad" #especialidad="ngModel" required><br>
+                          
+                          Grado: <input type="number" min="1" max="6" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" name="grado" [(ngModel)]="alumnoNew.grado" #grado="ngModel" required>
+                          Grupo: <input type="text" min="1" max="6" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" name="grupo" [(ngModel)]="alumnoNew.grupo" #grupo="ngModel" required>
+                          Hora de entrada:<input type="text" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" min="1" max="12" name="horaEntrada" [(ngModel)]="alumnoNew.horaEntrada" #horaEntrada="ngModel" required> 
+                          Hora de salida: <input type="text" style="width: 40px; padding: 0px; margin: 3px 3px;; font-size: 15px; height: 25px;" min="1" max="12" name="horaSalida" [(ngModel)]="alumnoNew.horaSalida" #horaSalida="ngModel" required>
+                      </p>
+                  <hr>
+                  <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
+                  <button mat-raised-button matStepperNext color="warn">Siguiente</button>
+                  </mat-step>
+                  <mat-step label="Estudios realizados para la vida Eterna">
+                      <div class="d-flex">
+                          <p>
+                              Grado de estudios al que llegaste en tu ultimo grado de catesismo(primaria): <input type="number" style="width: 30px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="4" max="9" name="catesismo" [(ngModel)]="alumnoNew.catesismo" #catesismo="ngModel" required>
+                          
+                              Otros Estudios personales: <input type="text" style="width: 300px; padding: 0; margin: 0px; font-size: 15px; height: 25px;" name="otroTipoCate" [(ngModel)]="alumnoNew.otroTipoCate" #otroTipoCate="ngModel" required><br>
+                          
+                             <strong>Sacramentos Recibidos: </strong> 
+                              <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Bautismo</label>
+                              <input type="radio" class="form-check-input" type="radio" style="width: 20px; height: 20px; margin: 10px 20px 0px 1px;" name="bautismo" [(ngModel)]="alumnoNew.bautismo" #bautismo="ngModel" value="bautismo">
+                              <label style="margin: 10px 0 0 25px;" class="form-check-label" for="inlineRadio2">Confirmacion</label>
+                              <input type="radio" class="form-check-input" type="radio" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="confirmacion" [(ngModel)]="alumnoNew.confirmacion" #confirmacion="ngModel" value="confirmacion">
+                              <label style="margin: 10px 0 0 25px;" class="form-check-label" for="inlineRadio2">Eucaristia</label>
+                              <input type="radio" class="form-check-input" type="radio" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="eucaristia" [(ngModel)]="alumnoNew.eucaristia" #eucaristia="ngModel" value="eucaristia"><br>
+                              
+                              ¿Ya sabes cual es tu vocacion en la vida?(en caso de que si,especifica): <input type="text" style="padding: 0; margin: 0px; font-size: 15px; height: 25px;" name="vocacion" [(ngModel)]="alumnoNew.vocacion" #vocacion="ngModel" value="">    
+                          </p>
+                          </div>
+                              <hr>
+                              <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
+                              <button mat-raised-button matStepperNext color="warn">Siguiente</button>
+                  </mat-step>     
+                  <mat-step label="Ocupaciones diversas" completed=false optional>
+                      <p>
+                          Escribe el nombre de las agrupacioes de cualquier tipo a las que pertenezcas(religiosas, deportivas, politicas, sociales, etc.), asi como el cargo que ocupas: <input type="text" style="width: 600px; padding: 0px 0px 0px 0px; margin: 0px; font-size: 15px; height: 40px;" name="agrupacion" [(ngModel)]="alumnoNew.agrupacion" #agrupacion="ngModel" required>
+                      </p>
+                   <div>
+                      <p> 
+                          <b>Lugar de trabajo</b><br>
+                          <input type="text" placeholder="Calle" style=" margin: 0; width: 450px;" name="calleTrabajo" [(ngModel)]="alumnoNew.calleTrabajo" #calleTrabajo="ngModel">
+                          <input type="number" min="1" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="numeroTrabajo" [(ngModel)]="alumnoNew.numeroTrabajo" #numeroTrabajo="ngModel">
+                          <input type="text" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="coloniaTrabajo" [(ngModel)]="alumnoNew.coloniaTrabajo" #coloniaTrabajo="ngModel">
+                          <input type="number" min="1" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="cpTrabajo" [(ngModel)]="alumnoNew.cpTrabajo" #cpTrabajo="ngModel">
+                          <input type="text" placeholder="Nombre de le Empresa" style=" margin: 0" name="nombreTrabajo" [(ngModel)]="alumnoNew.nombreTrabajo" #nombreTrabajo="ngModel">
+                          <input type="text" style="width:200px;" placeholder="Horario: ejemplo: 8:00a.m.-6:00p.m" style=" margin: 0" name="" [(ngModel)]="alumnoNew.horarioTrabajo" #horarioTrabajo="ngModel">
+                          <input type="text" style="width:1000px;" placeholder="Tareas que realiza" style=" margin: 0" name="tareasTrabajo" [(ngModel)]="alumnoNew.tareasTrabajo" #tareasTrabajo="ngModel">
+                      </p>
+                  </div> 
+                  <hr>
+                  <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
+                  <button mat-raised-button matStepperNext color="warn">Siguiente</button>
+                  </mat-step> 
+                  <mat-step label="Datos Familiares">
+                      <p>
+                          <h2></h2>
+                          <div class="d-flex">
+                          Papá: <input type="text" placeholder="Apellido Paterno" style=" margin: 0;" name="apellidoPM" [(ngModel)]="alumnoNew.apellidoPM" #apellidoPM="ngModel" required>
+                          <input type="text" placeholder="Apellido Materno" name="apellidoPP" [(ngModel)]="alumnoNew.apellidoPP" #apellidoPP="ngModel" required>
+                          <input type="text" placeholder="Nombre" name="nombreP" [(ngModel)]="alumnoNew.nombreP" #nombreP="ngModel" required>
+                             <p style="margin: 10px 0px;">vive:</p>
+                              <div>
+                                  <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivep" [(ngModel)]="alumnoNew.vivep" #vivep="ngModel" value="Si" checked required>
+                              </div>
+                              <div>
+                                  <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivep" [(ngModel)]="alumnoNew.vivep" #vivep="ngModel" value="No" required>
+                              </div>
+                          </div>
+                  
+                          <input type="text" placeholder="Ocupacion" name="ocupacionP" [(ngModel)]="alumnoNew.ocupacionP" #ocupacionP="ngModel" required><br><br>
+                         
+                          <div class="d-flex">
+                              Mamá: <input type="text" placeholder="Apellido Paterno" style=" margin: 0;" name="apellidoMP" [(ngModel)]="alumnoNew.apellidoMP" #apellidoMP="ngModel" required>
+                              <input type="text" placeholder="Apellido Materno" name="apellidoMM" [(ngModel)]="alumnoNew.apellidoMM" #apellidoMM="ngModel" required>
+                              <input type="text" placeholder="Nombre" name="nombreM" [(ngModel)]="alumnoNew.nombreM" #nombreM="ngModel" required>
+                              <p style="margin: 10px 0px;">vive:</p>
+                                  <div>
+                                      <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
+                                      <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivem" [(ngModel)]="alumnoNew.vivem" #vivem="ngModel" value="Si" checked required>
+                                  </div>
+                                  <div>
+                                      <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
+                                      <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivem" [(ngModel)]="alumnoNew.vivem" #vivem="ngModel" value="No" required>
+                                  </div>
+                          </div>
+                          <input type="text" placeholder="Ocupacion" name="ocupacionM" [(ngModel)]="alumnoNew.ocupacionM" #ocupacionM="ngModel" required><br><br>
+                          <div class="d-flex">
+                         <strong style="margin: 0px 0px 0px 150px;">casados por la Iglesia Católica:</strong>    
+                           <div>
+                              <label style="margin:0px 1px;" class="form-check-label" for="inlineRadio2">Si</label>
+                              <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesia" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesia="ngModel" value="Si" checked>
+                          </div>
+                          <div>
+                              <label style="margin:0px 0px 0px 20px;" class="form-check-label" for="inlineRadio2">No</label>
+                              <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesia" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesia="ngModel" value="No">
+                          </div>
+                             <p style="margin: 0px 0px 0px 90px;"><strong> casados al civil:</strong></p>
+                              <div>
+                                  <label style="margin:0px 1px;" class="form-check-label" for="inlineRadio2">Si</label>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilSi" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivil="ngModel"  value="Si" checked>
+                              </div>
+                              <div>
+                                  <label style="margin:0px 0px 0px 20px;" class="form-check-label" for="inlineRadio2">No</label>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilNo" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivil="ngModel"  value="No">
+                              </div><br>
+                          </div>
+                      
+                          numero de hermanos(sin incluirte): <input type="number" style=" margin: 0; width: 50px;" name="numHermanos" [(ngModel)]="alumnoNew.numHermanos" #numHermanos="ngModel"> Edades(de menor a mayor sin incluirte): <input type="numer" style=" margin: 0; width: 300px;" name="edades" [(ngModel)]="alumnoNew.edades" #edades="ngModel" required>
+                          <div class="d-flex">    
+                              <button mat-raised-button matStepperPrevious color="accent" style="width: 150px; height:40px; margin-top:20px;">Regresar</button>
+                              <button class="btn btn-outline-success col-8" type="submit" style="margin: 20px 110px;" onclick="document.location.reload();">Enviar</button>
+                          </div>
+                          <h2 style="margin: 0px;">"Por una profunda formacion moral y cristiana" SJPII</h2>
+                      </mat-step>
+                  </mat-horizontal-stepper>
+              </form>
+              </div>            
+      </mat-sidenav-content>
+</mat-sidenav-container>
 

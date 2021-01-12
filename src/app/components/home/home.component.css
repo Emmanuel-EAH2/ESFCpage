@@ -3,7 +3,7 @@ perspective: 30px -100px;
 }
 
 .boton{
-    background-color: #f37c; width: 100px;  height: 100px;  margin: 0px 15px; border: 1px solid #f3f4;
+    background-color: transparent; width: 100px;  height: 100px;  margin: 0px 15px; border:transparent;
     /* transition-delay: 5s; */
     transition:transform 1s;
 } 
@@ -15,7 +15,7 @@ perspective: 30px -100px;
 
 
 .boton2{
-    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
+    background-color:  transparent; width: 100px; height: 100px; margin: 0px 15px; border: transparent;
     transition:transform 1s;
 }
 .boton2:hover{
@@ -24,7 +24,7 @@ perspective: 30px -100px;
 }
 
 .boton3{
-    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #f3f4;
+    background-color:  transparent; width: 100px; height: 100px; margin: 0px 15px; border: transparent;
     transition:transform 1s;
 }
 .boton3:hover{
@@ -33,7 +33,7 @@ perspective: 30px -100px;
 }
  
 .boton4{
-    background-color:  #f37c; width: 100px; height: 100px; margin: 0px 15px; border: 1px solid #200a;
+    background-color:  transparent; width: 100px; height: 100px; margin: 0px 15px; border: transparent;
     transition:transform 1s;
 }
 .boton4:hover{
@@ -42,7 +42,7 @@ perspective: 30px -100px;
 }
  
 .boton5{
-    background-color:  #8880; width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
+    background-color: transparent; width: 100px; height: 100px; margin: 0px 15px;  border: transparent;
     transition:transform 1s;
 }
 .boton5:hover{
@@ -51,7 +51,7 @@ perspective: 30px -100px;
 }
  
 .boton6{
-    background-color: #8880; width: 100px; height: 100px; margin: 0px 15px;  border: 1px solid rgb(218, 38, 6);
+    background-color:transparent; width: 100px; height: 100px; margin: 0px 15px;  border: transparent;
     transition:transform 1s;
 }
 .boton6:hover{
@@ -65,9 +65,9 @@ perspective: 30px -100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    /* filter: contrast(1.2); */
+    filter: saturate(1.5);
     object-fit: cover;
-    animation: opacidad 2.7s both;
+    animation: opacidad 5s both;
 }
 @keyframes opacidad{
     from{

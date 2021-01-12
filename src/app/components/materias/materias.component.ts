@@ -25,7 +25,7 @@ export class MateriasComponent implements OnInit {
   }
 
 
-modificar(form: NgForm){
+modificar(){
   this.app.putData(this.idMateriaActualizar, this.materiaUpd).then((data:any)=>{
     this.materia = data;
     console.log(this.materia);
