@@ -16,7 +16,7 @@
 
 mat-expansion-panel{
     padding: 18px;
-    margin: 5px;
+    margin: 5px 0px;
 }
 
 mat-expansion-panel-header{
@@ -98,4 +98,18 @@ td{
     margin: 10px;
     width: 71px;
     height: 70px;
+    background-color:#ff042344;
   }
+  button:focus{
+    outline: none;
+}
+.agregar{
+  background-color: #444;
+  font-size: 20px;
+  font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+  color: mediumturquoise;
+}
+.agregar:hover{
+  color: white;
+  background-color:green;
+}

@@ -8,11 +8,14 @@
 
 *{
   box-sizing: border-box;
+  
 }
 .modal3{
   animation: opacidad 1s both;
 }
-
+button:focus{
+  outline: none;
+}
 table{
     width: 100%;
   }
@@ -95,4 +98,5 @@ mat-sidenav-container{
     margin: 10px;
     width: 71px;
     height: 70px;
+    background-color:#ff042344;
   }

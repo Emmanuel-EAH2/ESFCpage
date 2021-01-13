@@ -25,6 +25,9 @@ input{
     color:#021;
 }
 
+button:focus{
+  outline: none;
+}
 input:hover{
     height: 40px;
 }
@@ -72,4 +75,5 @@ mat-sidenav-container{
     margin: 10px;
     width: 71px;
     height: 70px;
+    background-color:#ff042344;
   }

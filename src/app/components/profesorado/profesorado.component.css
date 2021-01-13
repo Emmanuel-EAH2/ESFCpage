@@ -34,6 +34,9 @@ font-size: 25px;
     margin-left: 60px;
     flex-wrap: wrap;
 }
+button:focus{
+    outline: none;
+}
 
 .fondo{
     background-image: url(https://fondosmil.com/fondo/27545.jpg);
@@ -41,9 +44,10 @@ font-size: 25px;
     background-size: cover;
     background-attachment: scroll;
     padding-top: 50px;
-    height:max-content;
+    height:1700px;
+    width: 1400px;
     animation: opacidad 2.7s both;
-    background-position-x: -400px;
+    background-position-x: -100px;
 }
 
 h2{
@@ -67,7 +71,8 @@ mat-sidenav-container{
       width: 120px;
     }
     .acomodo{
-      margin: 10px;
-      width: 71px;
-      height: 70px;
-    }
+        margin: 10px;
+        width: 71px;
+        height: 70px;
+        background-color:#ff042344;
+      }

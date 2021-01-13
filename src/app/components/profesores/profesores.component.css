@@ -38,4 +38,8 @@ mat-sidenav{
   margin: 10px;
   width: 71px;
   height: 70px;
+  background-color:#ff042344;
+}
+button:focus{
+  outline: none;
 }

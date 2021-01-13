@@ -85,4 +85,12 @@ mat-sidenav-container{
     width: 71px;
     height: 70px;
     filter:saturate(1);
+    background-color:#ff042344;
   }
+  
+  img{
+    filter: grayscale(10) opacity(0.2) contrast(2);
+  }
+  button:focus{
+    outline: none;
+}
