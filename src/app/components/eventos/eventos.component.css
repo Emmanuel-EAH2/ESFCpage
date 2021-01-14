@@ -1,0 +1,49 @@
+.acomodo{
+    margin: 10px;
+    width: 71px;
+    height: 70px;
+    background-color:#ff042344;
+  }
+  @keyframes opacidad{
+    from{
+      opacity: 0;
+    }to{
+      opacity: 1;
+    }
+  }
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    animation: opacidad 2s both;
+    color: #000;
+}
+
+input{
+    width: 400px;
+    height: 40px;
+    margin: 0px 5px 5px 10px;
+    border: transparent;
+    text-align: center;
+    font-size: 18px;   
+    border-bottom: 2px solid #666f;
+    background-color: transparent;
+    color:#021;
+}
+
+button:focus{
+  outline: none;
+}
+input:hover{
+    height: 40px;
+}
+
+h2{
+    margin: 25px 270px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p{
+  color:#000;
+}

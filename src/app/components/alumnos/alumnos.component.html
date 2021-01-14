@@ -66,26 +66,98 @@
                   <hr>
               
                     
-                  <input type="text" placeholder="Escibe tu Apellido Paterno" name="apellidoP" [(ngModel)]="alumnoNew.apellidoP" #apellidoP="ngModel" required>
-                  <input type="text" placeholder="Escibe tu Apellido Materno" name="apellidoM" [(ngModel)]="alumnoNew.apellidoM" #apellidoM="ngModel" required>
-                  <input type="text" placeholder="Escibe tu Nombre" minlength="4" name="nombre" [(ngModel)]="alumnoNew.nombre" #nombre="ngModel" required>
-                          <input type="number" min="12" max="18" placeholder="Edad" style="width: 65px; margin:0px 0px 0px 0px;" name="edad" [(ngModel)]="alumnoNew.edad" #edad="ngModel" required>
+                  <input type="text" placeholder="Escibe tu Apellido Paterno" name="apellidoP" [(ngModel)]="alumnoNew.apellidoP" #apellidoP="ngModel" required="required" minlength="3" [class.is-invalid]="apellidoP.invalid && apellidoP.touched" [class.is-valid]="apellidoP.valid">
+                <div *ngIf="apellidoP.errors.required" class="invalid-feedback">
+                        Favor de rellenar el campo solicitado
+                </div>
+                                 <div *ngIf="apellidoP.errors.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                  <input type="text" placeholder="Escibe tu Apellido Materno" name="apellidoM" [(ngModel)]="alumnoNew.apellidoM" #apellidoM="ngModel" required="required" minlength="3" [class.is-invalid]="apellidoM.invalid && apellidoM.touched" [class.is-valid]="apellidoM.valid">
+                   <div *ngIf="apellidoM.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="apellidoM.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                  <input type="text" placeholder="Escibe tu Nombre" minlength="4" name="nombre" [(ngModel)]="alumnoNew.nombre" #nombre="ngModel" required="required" minlength="3" [class.is-invalid]="nombre.invalid && nombre.touched" [class.is-valid]="nombre.valid">
+                   <div *ngIf="nombre.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="nombre.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                          <input type="number" min="12" max="18" placeholder="Edad" style="width: 65px; margin:0px 0px 0px 0px;" name="edad" [(ngModel)]="alumnoNew.edad" #edad="ngModel" required="required" minlength="2" [class.is-invalid]="edad.invalid && edad.touched" [class.is-valid]="edad.valid">
+                           <div *ngIf="edad.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="edad.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
                         
-                          <input type="text" placeholder="Calle" style="margin: 10px 0px 3px 5px;" name="calle" [(ngModel)]="alumnoNew.calle" #calle="ngModel" required>
-                          <input type="number" min="1" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="numero" [(ngModel)]="alumnoNew.numero" #numero="ngModel" required>
-                          <input type="text" maxlength="5" placeholder="int" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="interior" [(ngModel)]="alumnoNew.interior" #interior="ngModel" required>
-                          <input type="text" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="colonia" [(ngModel)]="alumnoNew.colonia" #colonia="ngModel" required>
-                          <input type="number" min="1" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="cp" [(ngModel)]="alumnoNew.cp" #cp="ngModel" required>
+                          <input type="text" placeholder="Calle" style="margin: 10px 0px 3px 5px;" name="calle" [(ngModel)]="alumnoNew.calle" #calle="ngModel" required="required" minlength="3" [class.is-invalid]="calle.invalid && calle.touched" [class.is-valid]="calle.valid">
+                           <div *ngIf="calle.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="calle.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                          <input type="number" min="1" placeholder="Num" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="numero" [(ngModel)]="alumnoNew.numero" #numero="ngModel" required="required" minlength="3" [class.is-invalid]="numero.invalid && numero.touched" [class.is-valid]="numero.valid">
+                           <div *ngIf="numero.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="numero.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                          <input type="text" maxlength="5" placeholder="int" style="width: 70px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="interior" [(ngModel)]="alumnoNew.interior" #interior="ngModel">
+                          <input type="text" placeholder="Colonia o Fraccionamiento" style=" padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="colonia" [(ngModel)]="alumnoNew.colonia" #colonia="ngModel" required="required" minlength="7" [class.is-invalid]="colonia.invalid && colonia.touched" [class.is-valid]="colonia.valid">
+                           <div *ngIf="colonia.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="colonia.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                          <input type="number" min="1" placeholder="C.P." length="6" style="width: 90px; padding: 0px 0px 0px 10px; margin: 10px 0px 3px 0px;" name="cp" [(ngModel)]="alumnoNew.cp" #cp="ngModel" required="required" minlength="3" [class.is-invalid]="cp.invalid && cp.touched" [class.is-valid]="cp.valid">
+                           <div *ngIf="cp.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="cp.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
                         
-                          <input type="number" lang="12"  placeholder="Celular" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="celular" [(ngModel)]="alumnoNew.celular" #celular="ngModel" required>
-                          <input type="number" lang="12"  placeholder="Télefono" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="telefono" [(ngModel)]="alumnoNew.telefono" #telefono="ngModel" required>
+                          <input type="number" lang="12"  placeholder="Celular" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="celular" [(ngModel)]="alumnoNew.celular" #celular="ngModel" required="required" minlength="8" [class.is-invalid]="celular.invalid && celular.touched" [class.is-valid]="celular.valid">
+                           <div *ngIf="celular.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="celular.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
+                          <input type="number" lang="12"  placeholder="Télefono" style="width: 180px; margin: 0px;  padding: 0px 0px 0px 20px;" name="telefono" [(ngModel)]="alumnoNew.telefono" #telefono="ngModel" required="required" minlength="3" [class.is-invalid]="telefono.invalid && telefono.touched" [class.is-valid]="telefono.valid">
+                           <div *ngIf="telefono.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="telefono.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
                           <input type="email" style="margin: 10px 0px 3px 5px;" placeholder="correo" name="correo" [(ngModel)]="alumnoNew.correo" #corre="ngModel">
                         
-                          <input type="date"  placeholder="Fecha de Nacimiento" style="width: 180px;" name="fec_nac" [(ngModel)]="alumnoNew.fec_nac" #fec_nac="ngModel" required matTooltip="Fecha de Nacimiento">
+                          <input type="date"  placeholder="Fecha de Nacimiento" style="width: 180px;" name="fec_nac" [(ngModel)]="alumnoNew.fec_nac" #fec_nac="ngModel" required="required" minlength="3" [class.is-invalid]="fec_nac.invalid && fec_nac.touched" [class.is-valid]="fec_nac.valid" matTooltip="Fecha de Nacimiento">
+                           <div *ngIf="fec_nac.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="fec_nac.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
                         
-                          <input type="text"  placeholder="Lugar de nacimiento: Aguascalientes" name="lugar_nac" [(ngModel)]="alumnoNew.lugar_nac" #lugar_nac="ngModel" required>
+                          <input type="text"  placeholder="Lugar de nacimiento: Aguascalientes" name="lugar_nac" [(ngModel)]="alumnoNew.lugar_nac" #lugar_nac="ngModel" required="required" minlength="4" [class.is-invalid]="lugar_nac.invalid && lugar_nac.touched" [class.is-valid]="lugar_nac.valid">
+                           <div *ngIf="lugar_nac.errors?.required" class="invalid-feedback">
+                                    Campo obligatorio 
+                                </div>
+                                 <div *ngIf="lugar_nac.errors?.minlength" class="invalid-feedback">
+                                      Longitud invalida
+                                </div>
                         <hr>  
-                        <button mat-raised-button matStepperNext color="warn">Siguiente</button>    
+                        <button mat-raised-button matStepperNext color="warn">Siguiente</button> 
                       </mat-step>
                   <mat-step label="Estudios realizados para la vida laical">
                       <p>
@@ -213,7 +285,7 @@
                           numero de hermanos(sin incluirte): <input type="number" style=" margin: 0; width: 50px;" name="numHermanos" [(ngModel)]="alumnoNew.numHermanos" #numHermanos="ngModel"> Edades(de menor a mayor sin incluirte): <input type="numer" style=" margin: 0; width: 300px;" name="edades" [(ngModel)]="alumnoNew.edades" #edades="ngModel" required>
                           <div class="d-flex">    
                               <button mat-raised-button matStepperPrevious color="accent" style="width: 150px; height:40px; margin-top:20px;">Regresar</button>
-                              <button class="btn btn-outline-success col-8" type="submit" style="margin: 20px 110px;" onclick="document.location.reload();">Enviar</button>
+                              <button class="btn btn-outline-success col-8" type="submit" style="margin: 20px 110px;">Enviar</button>
                           </div>
                           <h2 style="margin: 0px;">"Por una profunda formacion moral y cristiana" SJPII</h2>
                       </mat-step>
