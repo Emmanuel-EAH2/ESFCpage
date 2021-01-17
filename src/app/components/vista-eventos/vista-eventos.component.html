@@ -45,45 +45,15 @@
               <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
               <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
             </svg>
-      </button>
-      </mat-sidenav>
-      <mat-sidenav-content>
-        <div class="d-flex">
-          <button (click)="sidenav.toggle()" mat-icon-button style="background-color: transparent; width: 40px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-            </svg></button>
-            <h2>Crear evento ESFC</h2>
-        </div>
-          <form method="post" enctype="multipart/form-data" #form="ngForm" ngForm="form" (ngSubmit)="enviarEvento(form)" autocomplete="off">
-            <input type="number" matTooltip="numero de evento" name="_id" #_id="ngModel" [(ngModel)]="eventoNew._id">
-              <input type="text" class="form-control shadow" style="width: 500px; margin-left: 435px;" placeholder="Ingresar secundaria" matTooltip="Nombre de la secundaria" name="secundaria" #secundaria="ngModel" [(ngModel)]="eventoNew.secundaria">
-              <input type="text" class="form-control shadow" style="width: 500px; margin-left: 435px;" placeholder="Ingresar nombre del evento" matTooltip="Nombre del evento" name="nombre" #nombre="ngModel" [(ngModel)]="eventoNew.nombre">
-              <input type="datetime-local" class="form-control shadow" style="width: 300px; margin-left: 530px;" matTooltip="dia del evento" name="dia" #dia="ngModel" [(ngModel)]="eventoNew.dia">
-
-              <table>
-                <thead>
-                  <td>Actividades</td>
-                  <td>objetivos</td>
-                  <td>materiales</td>
-                  <td>Coordinadores auxiliares</td>
-                </thead>
-                <tbody>
-                  <td><textarea wrap="soft" class="shadow" placeholder="Escribe aqui las actividades que se realizarán" name="actividades" #actividades="ngModel" [(ngModel)]="eventoNew.actividades"></textarea></td>
-                  <td><textarea wrap="soft" class="shadow" placeholder="Escribe aqui los objetivos" name="objetivos" #objetivos="ngModel" [(ngModel)]="eventoNew.objetivos"></textarea></td>
-                  <td><textarea wrap="soft" class="shadow" placeholder="Escribe aqui los materiales a utilizar" name="materiales" #materiales="ngModel" [(ngModel)]="eventoNew.materiales"></textarea></td>
-                  <td><textarea wrap="soft" class="shadow" placeholder="Escribe aqui los coordinadores que apoyarán al encargado del evento" name="coordinadoresAux" #coordinadoresAux="ngModel" [(ngModel)]="eventoNew.coordinadoresAux"></textarea></td>
-                </tbody>
-              </table>
-              <div class="d-flex">
-                <div class="d-flex"> 
-                <p style="font-size: 17px; margin-top: 10px; color:#f83">
-                  seleccionar una imagen para el evento: 
-                </p>
-                  <input type="file" class="form-control shadow" style="width: 420px; margin: 0px 100px 20px 3px;" placeholder="es opcional agregar una imagen" name="img" #img="ngModel" [(ngModel)]="eventoNew.img">
-                </div>
-                <input type="time" class="form-control shadow" style="width: 200px; margin: 0px 60px 20px 200px;" matTooltip="Hora en que se termina el evento" name="horaTermina" #horahoraTermina="ngModel" [(ngModel)]="eventoNew.horaTermina"> 
-              </div>
-            <button type="submit" class="btn btn-outline-success col-12" >Enviar</button>
-          </form>
-</mat-sidenav-content>
+          </button>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <button (click)="sidenav.toggle()" mat-icon-button style="background-color: transparent; width: 40px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16" >
+            <path style="color: white;" fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg></button>
+          <div class="d-flex" style="flex-wrap: wrap;">
+            <app-evento [EventoPadre] = "event" [Index] = "i" *ngFor= "let event of evento; let i = index"></app-evento>
+          </div>
+            <button class="btn col-12" mat-button color="warn" style="height: 50px;" [routerLink]="['/eventos']">Agregar</button> 
+        </mat-sidenav-content>
 </mat-sidenav-container>

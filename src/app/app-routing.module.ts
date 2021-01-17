@@ -11,6 +11,10 @@ import { ProfesoresComponent } from './components/profesores/profesores.componen
 import { ReportesSabatinosComponent } from './components/reportes-sabatinos/reportes-sabatinos.component';
 import { ProfesoradoComponent } from './components/profesorado/profesorado.component';
 import { VistaReportesComponent } from './components/vista-reportes/vista-reportes.component';
+import { VistaEventosComponent } from './components/vista-eventos/vista-eventos.component';
+import { EventoComponent } from './components/evento/evento.component';
+import { EventoCompletoComponent } from './components/evento-completo/evento-completo.component';
+
 
 const routes: Routes = [
   {path: 'createCoordinador', component: CoordinadoresComponent},
@@ -22,6 +26,8 @@ const routes: Routes = [
   {path: 'alumnos', component: AlumnadoComponent},
   {path: 'reportes', component: ReportesSabatinosComponent},
   {path: 'eventos', component: EventosComponent},
+  {path: 'evento-completo/:id', component: EventoCompletoComponent},
+  {path: 'eventosView', component: VistaEventosComponent},
   {path: 'materias', component: MateriasComponent},
   {path: 'profesores', component: ProfesoresComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'},

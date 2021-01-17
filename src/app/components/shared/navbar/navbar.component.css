@@ -37,9 +37,9 @@ input{
 }
 
 input:focus{
-    border-radius: 19px;
-    border: #fff;
+    border: 2px solid #333;
     box-sizing: border-box;
+    outline: none;
 }
 
 img{

@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "./material/material.module";
 import {ReactiveFormsModule} from '@angular/forms'
+import { RouterModule } from "@angular/router";
 /***COMPONENTS***/
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -23,6 +24,9 @@ import { CapitalizadoPipe } from './pipe/capitalizado.pipe';
 import { ProfesoradoComponent } from './components/profesorado/profesorado.component';
 import { VistaReportesComponent } from './components/vista-reportes/vista-reportes.component';
 import { MateriasComponent } from "./components/materias/materias.component";
+import { VistaEventosComponent } from './components/vista-eventos/vista-eventos.component';
+import { EventoComponent } from './components/evento/evento.component';
+import { EventoCompletoComponent } from './components/evento-completo/evento-completo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,10 @@ import { MateriasComponent } from "./components/materias/materias.component";
     CapitalizadoPipe,
     ProfesoradoComponent,
     VistaReportesComponent,
-    MateriasComponent
+    MateriasComponent,
+    VistaEventosComponent,
+    EventoComponent,
+    EventoCompletoComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import { MateriasComponent } from "./components/materias/materias.component";
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

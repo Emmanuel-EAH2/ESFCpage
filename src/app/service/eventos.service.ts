@@ -12,6 +12,9 @@ export class EventosService {
   getData(){
    return this.http.get('http://localhost:3003/evento').toPromise();
   }
+  getDatabyId(id: Number){
+   return this.http.get(`http://localhost:3003/evento/${id}`).toPromise();
+  }
 
   postData(eventoNew: eventosModel){
     return this.http.post('http://localhost:3003/evento', eventoNew).toPromise();

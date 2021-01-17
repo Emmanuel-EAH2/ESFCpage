@@ -67,10 +67,10 @@
               
                     
                   <input type="text" placeholder="Escibe tu Apellido Paterno" name="apellidoP" [(ngModel)]="alumnoNew.apellidoP" #apellidoP="ngModel" required="required" minlength="3" [class.is-invalid]="apellidoP.invalid && apellidoP.touched" [class.is-valid]="apellidoP.valid">
-                <div *ngIf="apellidoP.errors.required" class="invalid-feedback">
+                <div *ngIf="apellidoP.errors?.required" class="invalid-feedback">
                         Favor de rellenar el campo solicitado
                 </div>
-                                 <div *ngIf="apellidoP.errors.minlength" class="invalid-feedback">
+                                 <div *ngIf="apellidoP.errors?.minlength" class="invalid-feedback">
                                       Longitud invalida
                                 </div>
                   <input type="text" placeholder="Escibe tu Apellido Materno" name="apellidoM" [(ngModel)]="alumnoNew.apellidoM" #apellidoM="ngModel" required="required" minlength="3" [class.is-invalid]="apellidoM.invalid && apellidoM.touched" [class.is-valid]="apellidoM.valid">
@@ -284,8 +284,10 @@
                       
                           numero de hermanos(sin incluirte): <input type="number" style=" margin: 0; width: 50px;" name="numHermanos" [(ngModel)]="alumnoNew.numHermanos" #numHermanos="ngModel"> Edades(de menor a mayor sin incluirte): <input type="numer" style=" margin: 0; width: 300px;" name="edades" [(ngModel)]="alumnoNew.edades" #edades="ngModel" required>
                           <div class="d-flex">    
-                              <button mat-raised-button matStepperPrevious color="accent" style="width: 150px; height:40px; margin-top:20px;">Regresar</button>
-                              <button class="btn btn-outline-success col-8" type="submit" style="margin: 20px 110px;">Enviar</button>
+                              <button mat-raised-button matStepperPrevious color="accent" style="width: 120px; height:35px; margin-top:20px;">Regresar</button>
+                              <a href="mimodal" style="margin: 20px 110px; width: 1000px;" >
+                                  <button class="btn btn-outline-success col-8" type="submit">Enviar</button>
+                              </a>
                           </div>
                           <h2 style="margin: 0px;">"Por una profunda formacion moral y cristiana" SJPII</h2>
                       </mat-step>
@@ -295,3 +297,6 @@
       </mat-sidenav-content>
 </mat-sidenav-container>
 
+<div class="modal" #mimodal>
+    <h2></h2>
+</div>

@@ -58,7 +58,7 @@
                         <p class="LA">{{report.secundaria._id}}</p> <p class="LA">{{i}}</p>                                                               
                       </mat-panel-title>
                       <mat-panel-description>
-                         <h3>fecha del reporte:</h3> <p class="LA">{{report.fecha | date}}</p>
+                         <h3>fecha del reporte:</h3> <p class="LA">{{report.fecha.substring(0,10)}}</p>
                          <h3>lectura:</h3>  <p class="LA">{{report.lectura}}</p>
                          <h3>cita:</h3>  <p class="LA">{{report.cita}}</p>
                          <h3>hora que inicio:</h3>  <p class="LA">{{report.horaInicio}}</p>

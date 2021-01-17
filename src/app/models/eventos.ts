@@ -1,5 +1,6 @@
 export class eventosModel{
 secundaria: string;
+_id: Number
 nombre: string;
 dia: string;
 objetivos: string;

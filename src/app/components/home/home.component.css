@@ -4,6 +4,12 @@ perspective: 30px -100px;
 
 .boton{
     background-color: transparent; width: 100px;  height: 100px;  margin: 0px 15px; border:transparent;
+    outline: none;
+    background-image: url('../../../assets/evento.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: saturate(1) contrast(4) invert(50deg);
+    background-position-x: -80px;
     transition:transform 1s;
 } 
 
@@ -33,7 +39,7 @@ button:focus{
 .boton3{
     width: 100px;
     height: 100px; 
-    margin: 0px 15px; 
+    margin: 0px 15px;
     border: transparent;
     outline: none;
     background-image: url('../../../assets/reportes.jpg');
@@ -110,7 +116,7 @@ button:focus{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    filter: sepia(1);
+    filter: sepia(0.7);
     object-fit: cover;
     margin: 35px 230px;
   }

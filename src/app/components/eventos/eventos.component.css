@@ -1,6 +1,6 @@
 .acomodo{
     margin: 10px;
-    width: 71px;
+    width: 70px;
     height: 70px;
     background-color:#ff042344;
   }
@@ -16,7 +16,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
     animation: opacidad 2s both;
-    color: #000;
 }
 
 input{
@@ -26,24 +25,76 @@ input{
     border: transparent;
     text-align: center;
     font-size: 18px;   
-    border-bottom: 2px solid #666f;
-    background-color: transparent;
-    color:#021;
-}
-
-button:focus{
-  outline: none;
-}
-input:hover{
+    /* border-bottom: 2px solid #666f; */
+    background: linear-gradient(#aaa 0%,#999 50%,#444 100%);
+    border-radius: 15px;
+    color: #000;
+  }
+  
+  button:focus{
+    outline: none;
+  }
+  input:focus{
+    outline: none;
     height: 40px;
+    background-color: #ccc;
+    color:#000;
+    border-bottom: none;
 }
 
 h2{
-    margin: 25px 270px;
+    margin: 10px 540px;
     text-align: center;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
 }
 p{
-  color:#000;
+  color: #fff;
+}
+
+mat-sidenav-container{
+  background-image: url('../../../assets/eventos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  object-fit: cover;
+  height: 640px;
+  background-position-y: -600px;
+}
+mat-sidenav{
+  width: 110px;
+}
+
+textarea{
+  border-radius: 10px;
+  border: none;
+  background: radial-gradient(#eee 0%,#eee 30%,#ddd 60%, #aaa 100%);
+  width:300px; 
+  height:500px; 
+  margin: 10px 5px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  padding: 30px;
+}
+textarea:focus{
+  border: 2px solid #222;
+  outline: none;
+}
+
+thead{
+  font-size: 30px;
+  /* border: 2px solid #222; */
+  font-family: Arial;
+}
+
+td{
+ text-align: center;
+ /* border: 1px solid #000; */
+ color: #dd3122aa;
+}
+
+table{
+  margin: 10px 40px
 }

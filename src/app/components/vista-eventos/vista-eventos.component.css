@@ -1,0 +1,59 @@
+
+mat-sidenav-container{
+    background-image: url('../../../assets/eventos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    object-fit: cover;
+    height: 640px;
+    background-position-y: -600px;
+  }
+  mat-sidenav{
+    width: 110px;
+  }
+  button:focus{
+    outline: none;
+    color:#fff;
+  }
+  .acomodo{
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    background-color:#ff042344;
+  }
+  @keyframes opacidad{
+    from{
+      opacity: 0;
+    }to{
+      opacity: 1;
+    }
+  }
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: opacidad 3s both;
+    color:#000;
+    font-size: 15px;
+}
+.beber{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.card{
+    margin: 2px 10px 5px 100px;
+    transition: background-color 1s;
+    width: 500px;
+    height: 250px;
+    background-color:thistle;
+}
+.card:first-child{
+  margin: 2px 10px 5px 100px;
+}
+.card:hover{
+    background-color: #999;
+  }
+  .btn{
+    height: 20px;
+  }

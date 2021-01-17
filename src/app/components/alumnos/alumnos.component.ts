@@ -16,6 +16,7 @@ export class AlumnosComponent implements OnInit {
   nuevoAlumno: any;
   respuesta: any;
   loading: boolean;
+  altas: "Alumno agregado con exito";
   constructor(private app: AlumnosService) { }
 
   ngOnInit(): void {
@@ -29,15 +30,9 @@ export class AlumnosComponent implements OnInit {
 
   crearAlumno(form: NgForm){
     this.app.postAlumnos(this.alumnoNew).then((data:any)=>{
-      this.nuevoAlumno = data
+      this.nuevoAlumno = data;
       console.log(this.nuevoAlumno);
-      // if(data=false){
-      // this.respuesta = data.error
-      // console.log(this.respuesta);
-      // }
-    }).catch((err)=>console.log(err)
-  );
-  if(form.invalid) Object.values(form.controls).forEach(control => control.markAsTouched()); 
+    }).catch((err)=>console.log(err)); 
  }
 
 }

@@ -1,10 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fondo">
   <div class="collapse navbar-collapse">
     <img src="../../../../assets/escudo nombre - color.png" alt="escudo Escuela Secundaria de Formacion Católica" matTooltip="Escuela Secundaria de Formacion Catolica" width="240px" height="85px" routerLink="home">
-      <form class="form-inline" style="margin: 0px 0px 0px 55px;">
-        <input type="search" placeholder="Search" aria-label="Search" >
-        <button class="btn btn-outline-success my-2 my-sm-0" style="margin-right: 120px;" type="submit" matTooltip="Buscar">Search</button>
+
+      <form (submit)="$event.preventDefault" class="form-inline" style="margin: 0px 0px 0px 55px;">
+        <input #valorBuscar (keyup.enter)="Search(valorBuscar.value)" type="search" placeholder="Search" aria-label="Search" >
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="Search(valorBuscar.value)" style="margin-right: 120px;" type="submit" matTooltip="Buscar">Search</button>
       </form>
+
       <button class="btn login" style="margin: 0px 1px 0px 15px;" routerLink="login" matTooltip="iniciar sesion">Iniciar sesion</button>
     </div>
   </nav>
