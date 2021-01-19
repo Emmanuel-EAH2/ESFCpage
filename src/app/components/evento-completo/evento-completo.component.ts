@@ -13,12 +13,29 @@ export class EventoCompletoComponent implements OnInit {
   constructor(private Act: ActivatedRoute, private app: EventosService, private route: Router) { }
 evento: any;
 eventoNombre: any;
+eventoimg: any;
+actividades: any;
+coordiAux: any;
+dia: any;
+termina: any;
+objetivos: any;
+secundaria: any;
+materiales: any;
+coordiEncargado: any;
   ngOnInit(): void {
       this.Act.params.subscribe(params =>{
     this.app.getDatabyId(params['id']).then((data:any)=>{
-      this.evento = data
-      this.eventoNombre = data.nombre
-      // console.log(data)
+      this.evento = data;
+      this.eventoNombre = data.nombre;
+      this.eventoimg = data.img;
+      this.actividades = data.actividades;
+      this.coordiAux = data.coordinadoresAux;
+      this.dia = data.dia;
+      this.termina = data.horaTermina;
+      this.objetivos = data.objetivos;
+      this.secundaria = data.secundaria['_id'];
+      this.materiales = data.materiales; 
+      this.coordiEncargado = data.secundaria['coordinador']     
       console.log(this.evento);
     }).catch((error)=>console.log(error));
     });

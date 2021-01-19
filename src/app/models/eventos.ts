@@ -7,7 +7,6 @@ objetivos: string;
 materiales: string;
 coordinadoresAux: string;
 estimacionAlumnos: string;
-img: string;
 actividades: string;
 horaInicio: string;
 horaTermina: string;

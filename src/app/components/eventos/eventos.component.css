@@ -43,7 +43,7 @@ input{
 }
 
 h2{
-    margin: 10px 540px;
+    margin: 10px 0px 0px 540px;
     text-align: center;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -98,3 +98,20 @@ td{
 table{
   margin: 10px 40px
 }
+
+.image{
+  width:180px;
+  height:180px;
+  margin: 0px 3px 20px 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 83%;
+  border-radius: 20px;
+  }
+.posicion{
+  position: absolute;
+  width: 290px;
+  top: 195px;
+  left: 510px;
+} 

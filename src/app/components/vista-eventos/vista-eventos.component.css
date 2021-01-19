@@ -52,7 +52,7 @@ mat-sidenav-container{
   margin: 2px 10px 5px 100px;
 }
 .card:hover{
-    background-color: #999;
+    background-color: #aaa;
   }
   .btn{
     height: 20px;

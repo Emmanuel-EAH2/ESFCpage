@@ -94,3 +94,7 @@ mat-sidenav-container{
   button:focus{
     outline: none;
 }
+
+.area{
+  width: 1000px; height: 200px; margin: 0px 170px; text-align: start; font-size: 20px; font-family:sans-serif; padding: 20px; outline: none;
+}

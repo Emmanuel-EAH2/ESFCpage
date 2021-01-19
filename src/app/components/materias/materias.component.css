@@ -17,6 +17,12 @@
     }
 }
 
+@keyframes bomba{
+        0%{font-size: 120px}
+       35%{font-size: 1px}
+       100%{font-size: 40px}
+}
+
 .card{
     width:  500px;
     height: 400px;
@@ -87,4 +93,10 @@ mat-sidenav-container{
         margin-top: 35px;
         font-size: 30px;
         font-family: sans-serif;
+    }
+    .nombre{    
+        margin: 50px 10px 0px 30px;
+        color: #000;
+        text-align: center;
+        animation: bomba 6s ease-in-out both;
     }

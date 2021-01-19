@@ -7,7 +7,9 @@
                     <div class="col-md-8">
                       <div class="card-body">
                         <h2 class="card-title">{{EventoPadre.nombre}}</h2>
-                        <p class="card-text">dia del evento: {{EventoPadre.dia | date}} {{EventoPadre.dia | slice:11 }}</p>
+                        <p class="card-text" matTooltip="año/mes/dia/hora de inicio - hora que termina">dia del evento:{{EventoPadre.dia.substring(0,16)}}<br>
+                          termino del evento: {{EventoPadre.horaTermina.substring(0,16)}}
+                        </p>
                         <p class="card-text"><small class="text-muted">{{EventoPadre.secundaria._id}} - {{EventoPadre.secundaria.coordinador}}</small></p>
                       </div>
                     </div>
@@ -16,21 +18,3 @@
                 </div> 
            </div>
 
-
-<!-- <div class="beber">
-  <div class="card mb-3">
-    <div class="row g-0" >
-     <div class="col-md-4">
-          <img src="{{img}}">
-        </div>
-        <div class="col-md-8">
-           <div class="card-body">
-            <h2 class="card-title">{{nombre}}</h2>
-            <p class="card-text">dia del evento: {{dia | date}} {{dia | slice:11 }}</p>
-            <p class="card-text"><small class="text-muted">{{secundaria._id}} - {{secundaria.coordinador}}</small></p>
-          </div> 
-        </div>
-      </div>
-      <button class="btn btn-outline-success col-4 shadow" (click)="Navegar()">ver mas</button>
-    </div>
- </div> -->

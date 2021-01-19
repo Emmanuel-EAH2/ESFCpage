@@ -1,0 +1,4 @@
+<form enctype="multipart/form-data" method="post" #formImg="ngForm" ngForm="formImg" (ngSubmit)="subirImagen(formImg)">
+    <input type="file" #img="ngModel" [(ngModel)]="imagenNew.img" name="img">
+    <button class="btn btn-outline-success col-12 m-2">enviar</button>
+</form>

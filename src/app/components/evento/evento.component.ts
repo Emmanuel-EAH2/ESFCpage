@@ -12,10 +12,12 @@ export class EventoComponent implements OnInit {
 
 
   evento: any;
+  image: any;
   eventoNew: eventosModel = new eventosModel();
 
   @Input() EventoPadre: any;
   @Input() Index: Number = 0;
+  // @Input() ImagenPadre: any
   @Output() selectedEvento: EventEmitter<number>
 
   constructor(private route: Router, private app: EventosService) { 
@@ -30,7 +32,13 @@ export class EventoComponent implements OnInit {
   ngOnInit(): void {
     this.app.getData().then((data:any)=>{
         this.evento = data.eventos
-   }).catch((error)=>console.log(error))
+   }).catch((error)=>console.log(error));
+
+//    this.app.getDataImg().then((data:any)=>{
+//     this.image = data
+//     console.log(this.image);
+    
+// }).catch((error)=>console.log(error));
   }
 
   Navegar(){

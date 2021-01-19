@@ -27,6 +27,7 @@ import { MateriasComponent } from "./components/materias/materias.component";
 import { VistaEventosComponent } from './components/vista-eventos/vista-eventos.component';
 import { EventoComponent } from './components/evento/evento.component';
 import { EventoCompletoComponent } from './components/evento-completo/evento-completo.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { EventoCompletoComponent } from './components/evento-completo/evento-com
     MateriasComponent,
     VistaEventosComponent,
     EventoComponent,
-    EventoCompletoComponent
+    EventoCompletoComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

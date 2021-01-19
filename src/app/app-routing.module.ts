@@ -14,6 +14,7 @@ import { VistaReportesComponent } from './components/vista-reportes/vista-report
 import { VistaEventosComponent } from './components/vista-eventos/vista-eventos.component';
 import { EventoComponent } from './components/evento/evento.component';
 import { EventoCompletoComponent } from './components/evento-completo/evento-completo.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'eventosView', component: VistaEventosComponent},
   {path: 'materias', component: MateriasComponent},
   {path: 'profesores', component: ProfesoresComponent},
+  {path: 'search', component: SearchComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'},
 ];
 

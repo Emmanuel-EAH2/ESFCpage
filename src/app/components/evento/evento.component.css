@@ -47,12 +47,14 @@ mat-sidenav-container{
     width: 500px;
     height: 290px;
     background-color:thistle;
+    transition: background-color 1.2s;
+    transition-delay: 0.3 s;
 }
 .card:first-child{
   margin: 2px 10px 5px 100px;
 }
 .card:hover{
-    background-color: #999;
+    background-color: #ff15;
   }
 
   .btn{
