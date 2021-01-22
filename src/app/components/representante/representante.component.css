@@ -1,0 +1,38 @@
+button:focus{
+    outline: none;
+}
+mat-sidenav-container{
+    background-color: #fff;
+    height: 700px;
+    }
+    
+    mat-sidenav{
+      /* background-color: lightcoral; */
+      width: 120px;
+    }
+    .acomodo{
+        margin: 10px;
+        width: 71px;
+        height: 70px;
+        background-color:#ff042344;
+      }
+
+input{
+    width: 200px;
+    outline: none;
+    border-radius: 5px;
+    border: transparent;
+    border-bottom: 2px solid black;
+    margin: 5px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.jumbotron{
+    padding: 70px 400px;
+}
+h2{
+    color: #000f;
+    font-size: 30px;
+}

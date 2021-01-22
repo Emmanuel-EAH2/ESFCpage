@@ -89,3 +89,6 @@ mat-sidenav-container{
       .fadeIn{
         animation: opacidad2 4s both;
       }
+      i{
+          font-size: 25px;
+      }

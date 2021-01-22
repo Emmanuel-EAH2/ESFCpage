@@ -1,5 +1,6 @@
 export class alumnosModel{
 secundaria: 'Santa Ines';
+_id: Number
 nombre: string;
 apellidoP: string;
 apellidoM: string;

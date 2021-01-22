@@ -6,9 +6,8 @@ import { alumnosModel } from "../models/alumnos";
   providedIn: 'root'
 })
 export class AlumnosService {
-
+   alumnos: any = [];
   constructor(private http: HttpClient) { }
-  
 /**************************FUNCIONES GET***********************/
   getAlumnos(){
     return this.http.get('http://localhost:3003/alumnos').toPromise();
@@ -25,6 +24,23 @@ export class AlumnosService {
    getDataById(id: string){
      return this.http.get(`http://localhost:3003/alumnos/${id}`).toPromise();
    }
+
+   search(termino){
+    let resultados: any = [];
+    termino = termino.toLowerCase();
+    this.getAlumnosActivate().then((data:any)=>{
+      this.alumnos = data
+         for(let i=0; i < this.alumnos.length; i++){
+             let alumno = this.alumnos[i];
+             const nombre = alumno.nombre.toLowerCase();
+               if(nombre.indexOf(termino) >= 0){
+                 alumno.index = i;
+                 resultados.push(alumno);
+            }
+           }    
+        });
+        return resultados;
+  }
 /*****************FIN DE LAS FUNCIONES GET**********************/
 
   postAlumnos(alumno: alumnosModel){

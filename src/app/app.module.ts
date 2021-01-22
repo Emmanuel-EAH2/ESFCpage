@@ -28,6 +28,8 @@ import { VistaEventosComponent } from './components/vista-eventos/vista-eventos.
 import { EventoComponent } from './components/evento/evento.component';
 import { EventoCompletoComponent } from './components/evento-completo/evento-completo.component';
 import { SearchComponent } from './components/search/search.component';
+import { RepresentanteComponent } from './components/representante/representante.component';
+import { RepresViewComponent } from './components/repres-view/repres-view.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { SearchComponent } from './components/search/search.component';
     VistaEventosComponent,
     EventoComponent,
     EventoCompletoComponent,
-    SearchComponent
+    SearchComponent,
+    RepresentanteComponent,
+    RepresViewComponent
   ],
   imports: [
     BrowserModule,

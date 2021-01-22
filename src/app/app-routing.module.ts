@@ -15,6 +15,8 @@ import { VistaEventosComponent } from './components/vista-eventos/vista-eventos.
 import { EventoComponent } from './components/evento/evento.component';
 import { EventoCompletoComponent } from './components/evento-completo/evento-completo.component';
 import { SearchComponent } from './components/search/search.component';
+import { RepresentanteComponent } from './components/representante/representante.component';
+import { RepresViewComponent } from './components/repres-view/repres-view.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,9 @@ const routes: Routes = [
   {path: 'eventosView', component: VistaEventosComponent},
   {path: 'materias', component: MateriasComponent},
   {path: 'profesores', component: ProfesoresComponent},
-  {path: 'search', component: SearchComponent},
+  {path: 'results/:termino', component: SearchComponent},
+  {path: 'representantes', component: RepresentanteComponent},
+  {path: 'represView', component: RepresViewComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'},
 ];
 

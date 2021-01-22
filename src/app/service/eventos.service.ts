@@ -8,6 +8,7 @@ import { imagenModel } from "../models/imagenEvent";
 })
 export class EventosService {
 
+  eventos: any = [];
   constructor(private http: HttpClient) { }
 
   getData(){
@@ -28,4 +29,20 @@ export class EventosService {
     return this.http.post('http://localhost:3003/imagen/evento', imagenNew).toPromise();
   }
 
+  search(termino){
+    let resultado: any = [];
+    termino = termino.toLowerCase();
+    this.getData().then((data:any)=>{
+      this.eventos = data.eventos
+      for(let i=0; i < this.eventos.length; i++){
+        let evento = this.eventos[i];
+        const nombre = evento.nombre.toLowerCase();
+        if(nombre.indexOf(termino)>=0){
+          evento.index = i
+          resultado.push(evento);
+        }
+      }
+    });
+    return resultado;
+  }
 }

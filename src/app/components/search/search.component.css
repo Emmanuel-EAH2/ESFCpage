@@ -1,0 +1,11 @@
+
+button{
+        outline: none;
+    }
+
+*{
+    color: #000;
+}
+.fondo{
+    background: linear-gradient(#554 0%, #eee 50%);
+}

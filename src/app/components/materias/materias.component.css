@@ -98,5 +98,5 @@ mat-sidenav-container{
         margin: 50px 10px 0px 30px;
         color: #000;
         text-align: center;
-        animation: bomba 6s ease-in-out both;
+        animation: bomba 6s 0.8s ease-in-out both;
     }
