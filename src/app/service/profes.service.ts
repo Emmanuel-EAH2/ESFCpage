@@ -26,7 +26,6 @@ profes: any = [];
     termino = termino.toLowerCase();
     this.getDataSI().then((data:any)=>{
       this.profes = data.Profes
-        console.log(this.profes);
       for(let i = 0; i < this.profes.length; i++ ){
         let profe = this.profes[i];
         const nombre = profe._id.toLowerCase();

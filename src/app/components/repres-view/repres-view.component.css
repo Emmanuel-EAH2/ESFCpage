@@ -1,0 +1,26 @@
+mat-sidenav-container{
+    background-color: #fff;
+    
+    }
+    
+    mat-sidenav,
+    mat-sidenav-content{
+    padding: 1px;
+    }
+    
+    mat-sidenav{
+      /* background-color: lightcoral; */
+      width: 120px;
+    }
+    .acomodo{
+      margin: 10px;
+      width: 71px;
+      height: 70px;
+      background-color:#ff042344;
+    }
+    button:focus{
+      outline: none;
+    }
+p, h2, h3, h4{
+    color: black;
+}

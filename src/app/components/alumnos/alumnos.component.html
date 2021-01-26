@@ -39,20 +39,23 @@
             </svg>
       </button>
       
-      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Representantes" [routerLink]="['/represView']">
+      <button class="acomodo" mat-fab aria-label="Example icon button with a heart icon" matTooltip="Representantes" [routerLink]="['/createCoordinador']">
           <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
               <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
               <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
             </svg>
       </button>
+
       </mat-sidenav>
       <mat-sidenav-content>
           <div class="contenedor">
                   <div class="d-flex">
+
                     <button (click)="sidenav.toggle()" mat-icon-button style="background-color: transparent; width: 40px; height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                       </svg></button>
+
                       <h2>Escuela Secundaria de Formacion Catolica (Inscripción)</h2>
                       <button class="m-4" [routerLink]="['/alumnos']" matTooltip="regresar a los alumnos" color="warn" mat-raised-button> <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
                           <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
@@ -60,7 +63,9 @@
                   </div>
               <form autocomplete="off" ngForm="form" #form="ngForm" (ngSubmit)="crearAlumno(form)">
                     <mat-horizontal-stepper linear color="warn">
-                        <mat-step label="Datos personales">
+
+
+                  <mat-step label="Datos personales">
                          <input type="number" #id="ngModel" name="_id" [(ngModel)]="alumnoNew._id" placeholder="folio" style="width: 150px;">   
                   <input type="text" placeholder="Nombre de la Secundaria" style="width: 450px; margin: 0px 0px 10px 250px" name="secundaria" #secundaria="ngModel" [(ngModel)]="alumnoNew.secundaria" >
                   <h4 style="text-align: center;">Solicitud de inscripcion al ciclo <strong>2021-2022</strong></h4>
@@ -159,7 +164,8 @@
                                 </div>
                         <hr>  
                         <button mat-raised-button matStepperNext color="warn">Siguiente</button> 
-                      </mat-step>
+                  </mat-step>
+
                   <mat-step label="Estudios realizados para la vida laical">
                       <p>
                           Primaria: <input type="number" style="width: 40px; padding: 0px; margin: 0px; font-size: 15px; height: 20px;" min="1" max="6" name="primaria" [(ngModel)]="alumnoNew.primaria" #primaria="ngModel" required>año. |   
@@ -185,6 +191,7 @@
                   <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
                   <button mat-raised-button matStepperNext color="warn">Siguiente</button>
                   </mat-step>
+
                   <mat-step label="Estudios realizados para la vida Eterna">
                       <div class="d-flex">
                           <p>
@@ -206,7 +213,8 @@
                               <hr>
                               <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
                               <button mat-raised-button matStepperNext color="warn">Siguiente</button>
-                  </mat-step>     
+                  </mat-step>   
+
                   <mat-step label="Ocupaciones diversas" completed=false optional>
                       <p>
                           Escribe el nombre de las agrupacioes de cualquier tipo a las que pertenezcas(religiosas, deportivas, politicas, sociales, etc.), asi como el cargo que ocupas: <input type="text" style="width: 600px; padding: 0px 0px 0px 0px; margin: 0px; font-size: 15px; height: 40px;" name="agrupacion" [(ngModel)]="alumnoNew.agrupacion" #agrupacion="ngModel" required>
@@ -227,6 +235,7 @@
                   <button mat-raised-button matStepperPrevious color="accent">Regresar</button>
                   <button mat-raised-button matStepperNext color="warn">Siguiente</button>
                   </mat-step> 
+
                   <mat-step label="Datos Familiares">
                       <p>
                           <h2></h2>
@@ -237,11 +246,11 @@
                              <p style="margin: 10px 0px;">vive:</p>
                               <div>
                                   <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
-                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivep" [(ngModel)]="alumnoNew.vivep" #vivep="ngModel" value="Si" checked required>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivepSi" [(ngModel)]="alumnoNew.vivep" #vivepSi="ngModel" required>
                               </div>
                               <div>
                                   <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivep" [(ngModel)]="alumnoNew.vivep" #vivep="ngModel" value="No" required>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivepNo" [(ngModel)]="alumnoNew.vivep" #vivepNo="ngModel" required>
                               </div>
                           </div>
                   
@@ -254,11 +263,11 @@
                               <p style="margin: 10px 0px;">vive:</p>
                                   <div>
                                       <label style="margin: 10px 0 0 0px;" class="form-check-label" for="inlineRadio2">Si</label>
-                                      <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivem" [(ngModel)]="alumnoNew.vivem" #vivem="ngModel" value="Si" checked required>
+                                      <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 0px 0px 1px;" name="vivemSi" [(ngModel)]="alumnoNew.vivem" #vivemSi="ngModel" required>
                                   </div>
                                   <div>
                                       <label style="margin: 10px 0px 0 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                                      <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivem" [(ngModel)]="alumnoNew.vivem" #vivem="ngModel" value="No" required>
+                                      <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin: 10px 2px 0px 1px;" name="vivemNo" [(ngModel)]="alumnoNew.vivem" #vivemNo="ngModel" required>
                                   </div>
                           </div>
                           <input type="text" placeholder="Ocupacion" name="ocupacionM" [(ngModel)]="alumnoNew.ocupacionM" #ocupacionM="ngModel" required><br><br>
@@ -266,20 +275,20 @@
                          <strong style="margin: 0px 0px 0px 150px;">casados por la Iglesia Católica:</strong>    
                            <div>
                               <label style="margin:0px 1px;" class="form-check-label" for="inlineRadio2">Si</label>
-                              <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesia" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesia="ngModel" value="Si" checked>
+                              <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesiaSi" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesiaSi="ngModel">
                           </div>
                           <div>
                               <label style="margin:0px 0px 0px 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                              <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesia" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesia="ngModel" value="No">
+                              <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosIglesiaNo" [(ngModel)]="alumnoNew.casadosIglesia" #casadosIglesiaNo="ngModel">
                           </div>
                              <p style="margin: 0px 0px 0px 90px;"><strong> casados al civil:</strong></p>
                               <div>
                                   <label style="margin:0px 1px;" class="form-check-label" for="inlineRadio2">Si</label>
-                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilSi" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivil="ngModel"  value="Si" checked>
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilSi" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivilSi="ngModel" >
                               </div>
                               <div>
                                   <label style="margin:0px 0px 0px 20px;" class="form-check-label" for="inlineRadio2">No</label>
-                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilNo" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivil="ngModel"  value="No">
+                                  <input type="radio" class="form-check-input" style="width: 20px; height: 20px; margin:0px;" name="casadosCivilNo" [(ngModel)]="alumnoNew.casadosCivil" #casadosCivilNo="ngModel" >
                               </div><br>
                           </div>
                       
@@ -291,10 +300,10 @@
                               </a>
                           </div>
                           <h2 style="margin: 0px;">"Por una profunda formacion moral y cristiana" SJPII</h2>
-                      </mat-step>
+                  </mat-step>
+
                   </mat-horizontal-stepper>
               </form>
               </div>            
       </mat-sidenav-content>
 </mat-sidenav-container>
-

@@ -14,7 +14,7 @@ export class RepresViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.app.getData().then((data:any)=>{
-      this.repres = data
+      this.repres = data.repre
       console.log(this.repres);
     }).catch((error)=>console.log(error));
   }

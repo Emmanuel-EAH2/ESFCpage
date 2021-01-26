@@ -9,3 +9,12 @@ button{
 .fondo{
     background: linear-gradient(#554 0%, #eee 50%);
 }
+
+h3::first-letter{
+    font-size: 20px;
+    /* color: red; */
+    text-transform: uppercase;
+}
+h3{
+    border-bottom: 2px solid black;
+}

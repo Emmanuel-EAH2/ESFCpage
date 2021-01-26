@@ -30,13 +30,15 @@ export class AlumnosService {
     termino = termino.toLowerCase();
     this.getAlumnosActivate().then((data:any)=>{
       this.alumnos = data
-         for(let i=0; i < this.alumnos.length; i++){
-             let alumno = this.alumnos[i];
-             const nombre = alumno.nombre.toLowerCase();
-               if(nombre.indexOf(termino) >= 0){
+      for(let i=0; i < this.alumnos.length; i++){
+        let alumno = this.alumnos[i];
+        const colonia = alumno.colonia.toLowerCase();
+        const calle = alumno.calle.toLowerCase();
+        const nombre = alumno.nombre.toLowerCase();
+               if(nombre.indexOf(termino) || calle.indexOf(termino) || colonia.indexOf(termino) >= 0){
                  alumno.index = i;
                  resultados.push(alumno);
-            }
+              }
            }    
         });
         return resultados;

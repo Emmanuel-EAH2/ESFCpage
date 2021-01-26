@@ -17,10 +17,13 @@ import { EventoCompletoComponent } from './components/evento-completo/evento-com
 import { SearchComponent } from './components/search/search.component';
 import { RepresentanteComponent } from './components/representante/representante.component';
 import { RepresViewComponent } from './components/repres-view/repres-view.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
-  {path: 'createCoordinador', component: CoordinadoresComponent},
+  {path: 'createSecu', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'coordinacion', component: CoordinacionComponent},
   {path: 'home', component: HomeComponent},
   {path: 'reportesView', component: VistaReportesComponent},
@@ -35,8 +38,8 @@ const routes: Routes = [
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'results/:termino', component: SearchComponent},
   {path: 'representantes', component: RepresentanteComponent},
-  {path: 'represView', component: RepresViewComponent},
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
+  {path: 'represView', component: RepresViewComponent}, 
+  {path: '', pathMatch: 'full', redirectTo: 'login'},
 ];
 
 @NgModule({

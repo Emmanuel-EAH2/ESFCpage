@@ -30,6 +30,8 @@ import { EventoCompletoComponent } from './components/evento-completo/evento-com
 import { SearchComponent } from './components/search/search.component';
 import { RepresentanteComponent } from './components/representante/representante.component';
 import { RepresViewComponent } from './components/repres-view/repres-view.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { RepresViewComponent } from './components/repres-view/repres-view.compon
     EventoCompletoComponent,
     SearchComponent,
     RepresentanteComponent,
-    RepresViewComponent
+    RepresViewComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

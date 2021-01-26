@@ -1,0 +1,9 @@
+<form method="post" #form="ngForm" ngForm="form" (ngSubmit)="crearSecu(form)">
+    <div class="form-group">
+        <input type="text" class="form-control mb-5 col-6" placeholder="Ingres nombre de la secundaria" name="_id" [(ngModel)]="secuNew._id" #_id="ngModel">
+        <input type="text" class="form-control mb-5 col-6" placeholder="coordinador de la secundaria" name="coordinador" [(ngModel)]="secuNew.coordinador" #coordinador="ngModel">
+        <input type="password" class="form-control mb-5 col-6" placeholder="contraseña" name="password" [(ngModel)]="secuNew.clave" #clave="ngModel">
+        <input type="password" class="form-control mb-5 col-6" placeholder="confirmar contraseña">
+        <button class="btn btn-outline-success col-8 m-2">Registrar</button>
+    </div>
+</form>
