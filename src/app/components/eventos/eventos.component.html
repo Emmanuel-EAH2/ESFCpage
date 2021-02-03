@@ -73,6 +73,7 @@
                   <td><textarea wrap="soft" class="shadow" placeholder="Escribe aqui los coordinadores que apoyarán al encargado del evento" name="coordinadoresAux" #coordinadoresAux="ngModel" [(ngModel)]="eventoNew.coordinadoresAux"></textarea></td>
                 </tbody>
               </table>
+              
               <input type="file" name="img" class="d-none"  placeholder="es opcional agregar una imagen" (change)="onPhotoSelected($event)" #photoInput [(ngModel)]="imagenNew.img">
                   <img [src] ="photoSelected || '../../assets//escudo - color.png'" class="image" alt="no-image" (click)="photoInput.click()" matTooltip="Haz click para seleccionar una imagen">
                   

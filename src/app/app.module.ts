@@ -1,7 +1,7 @@
 /***MODULES***/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 /****MATERIALS ANIMATION ROUTING AND FORMS*****/
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "./material/material.module";
 import {ReactiveFormsModule} from '@angular/forms'
 import { RouterModule } from "@angular/router";
+import { AuthGuard } from "./auth.guard";
+import { TokenInterceptorService } from "./service/token.interceptor.service";
 /***COMPONENTS***/
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -32,6 +34,7 @@ import { RepresentanteComponent } from './components/representante/representante
 import { RepresViewComponent } from './components/repres-view/repres-view.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -68,7 +71,12 @@ import { LoginComponent } from './components/login/login.component';
     ReactiveFormsModule,
     RouterModule
   ],
-  providers: [],
+  providers: [AuthGuard, 
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

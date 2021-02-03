@@ -21,16 +21,22 @@ export class SecundariaService {
   setToken(token: string){
     this.cookie.set("token", token);
   }
-  
-  getToken(){
-    return this.cookie.get("token");
-  }
 
-  getUser(id: any){
-    return this.http.get(`http://localhost:3003/secundaria/${id}`).toPromise();
+  getUser(secu: string){
+    return this.http.get(`http://localhost:3003/secundaria/${secu}`).toPromise();
   }
 
   getUserLogged(){
     const token = this.getToken();
   }
+
+    
+loggedIn(){
+  return !!localStorage.getItem('token')
+}
+
+getToken(){
+  return localStorage.getItem('token');
+}
+  
 }

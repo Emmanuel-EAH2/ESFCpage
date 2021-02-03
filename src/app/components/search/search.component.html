@@ -57,3 +57,20 @@
             </div>
         </div>
 </div>
+
+
+<!--**************************Materias ********************************-->
+<div class="alert" role="alert" *ngIf="ResulatdosMateria.length === 0">
+    Nose encuentran resultados de las MATERIAS para el término "<b>{{strBusqueda}}</b>"
+</div>
+<div *ngIf="ResulatdosMateria.length !== 0">
+    <P>XD</P>
+</div>
+
+<!------------------------------------------Representantes------------------------------->
+<div class="alert" role="alert" *ngIf="ResultadosRepres.length === 0">
+    Nose encuentran resultados de los Representantes para el término "<b>{{strBusqueda}}</b>"
+</div>
+<div *ngIf="ResultadosRepres.length !== 0">
+    <P>XD</P>
+</div>

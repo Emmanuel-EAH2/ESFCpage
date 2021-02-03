@@ -13,16 +13,19 @@ import { secuModel } from "../../models/secundaria";
 export class HomeComponent implements OnInit {
 
   secundaria: secuModel = new secuModel();
+  IdSecu : any;
   constructor(private app: SecundariaService) { }
 
   ngOnInit(): void {
-    this.getUserLogged();
+    // this.getUserLogged(this.secundaria._id);
   }
-   Input: MatSpinner
+  Input: MatSpinner
 
-   getUserLogged(){
-     this.app.getUser(this.app.login(this.secundaria));
-   }
+  //  getUserLogged(secu: string){
+  //    this.app.getUser(secu);
+  //  }
    
-
+  //  idSecundaria(id: string){
+  //   this.IdSecu = id;
+  //  }
 }

@@ -19,13 +19,13 @@ import { RepresentanteComponent } from './components/representante/representante
 import { RepresViewComponent } from './components/repres-view/repres-view.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
   {path: 'createSecu', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'coordinacion', component: CoordinacionComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'reportesView', component: VistaReportesComponent},
   {path: 'profesoresView', component: ProfesoradoComponent},
   {path: 'alumno', component: AlumnosComponent},
@@ -38,7 +38,7 @@ const routes: Routes = [
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'results/:termino', component: SearchComponent},
   {path: 'representantes', component: RepresentanteComponent},
-  {path: 'represView', component: RepresViewComponent}, 
+  {path: 'represView', component: RepresViewComponent},
   {path: '', pathMatch: 'full', redirectTo: 'login'},
 ];
 

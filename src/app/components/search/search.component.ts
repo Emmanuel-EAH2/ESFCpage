@@ -4,6 +4,8 @@ import { imagenModel } from "../../models/imagenEvent";
 import { EventosService } from "../../service/eventos.service";
 import { AlumnosService } from "../../service/alumnos.service";
 import { ProfesService } from "../../service/profes.service";
+import { MateriasService } from "../../service/materias.service";
+import { RepresentanteService } from "../../service/representante.service";
 import { ActivatedRoute } from "@angular/router";
 
 
@@ -16,10 +18,12 @@ export class SearchComponent implements OnInit {
 
   imagenNew: imagenModel = new imagenModel();
   image: any;
-  constructor(private appNO: EventosService, private route: ActivatedRoute, private app: AlumnosService, private appPro: ProfesService) { }
+  constructor(private appNO: EventosService, private route: ActivatedRoute, private app: AlumnosService, private appPro: ProfesService, private appMa: MateriasService, private appRe: RepresentanteService) { }
   ResulatdosAlum: any = [];
   ResulatdosEvent: any = [];
   ResulatdosProfes: any = [];
+  ResultadosRepres: any = [];
+  ResulatdosMateria: any = [];
   strBusqueda: string = '';
   alumnos : any = [];
 
@@ -27,6 +31,8 @@ export class SearchComponent implements OnInit {
     this.searchAlum();
     this.searchEvent();
     this.searchProfe();
+    this.searchRepre();
+    this.searchMateria();
   }
 
   searchAlum(){
@@ -41,7 +47,7 @@ export class SearchComponent implements OnInit {
     this.route.params.subscribe(params =>{
       this.strBusqueda = params['termino'];
       this.ResulatdosEvent = this.appNO.search(params['termino']);
-      console.log(this.ResulatdosEvent);
+      console.log(this.ResulatdosEvent); 
     });
   }
 
@@ -51,6 +57,22 @@ export class SearchComponent implements OnInit {
       this.ResulatdosProfes = this.appPro.search(params['termino']);
       console.log(this.ResulatdosProfes);
     });
+  }
+
+  searchRepre(){
+    this.route.params.subscribe(params =>{
+      this.strBusqueda = params['termino'];
+      this.ResultadosRepres = this.appRe.search(params['termino']);
+      console.log(this.ResultadosRepres);
+    })
+  }
+
+  searchMateria(){
+    this.route.params.subscribe(params =>{
+      this.strBusqueda = params['termino'];
+      this.ResulatdosMateria = this.appMa.search(params['termino']);
+      console.log(this.ResulatdosMateria);
+    })
   }
 
 
