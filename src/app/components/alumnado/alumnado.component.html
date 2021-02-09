@@ -56,8 +56,8 @@
     </div>
     <mat-table [dataSource]="alumnos" class="mat-elevation-z8 animacion" style="margin: 3px 5px 0px 0px;">
         <ng-container matColumnDef="hola8">
-          <mat-header-cell *matHeaderCellDef style="margin: 0px">Secundaria</mat-header-cell>
-          <mat-cell *matCellDef="let alumno" style="margin: 0px"> {{alumno.secundaria}} </mat-cell>
+          <mat-header-cell *matHeaderCellDef style="margin: 0px">Folio</mat-header-cell>
+          <mat-cell *matCellDef="let alumno" style="margin: 0px"> {{alumno._id}}</mat-cell>
         </ng-container>
     
         <ng-container matColumnDef="hola">
@@ -99,7 +99,7 @@
         <ng-container matColumnDef="hola7">
         <mat-header-cell *matHeaderCellDef class="text-center" style="margin: 0px 0px;">Acciones</mat-header-cell>
         <mat-cell *matCellDef="let alumno">
-          <button class="btn btn-outline-danger m-1" mat-raised-button (click)="idActualizar(alumno._id)" data-toggle="modal" data-target="#ctg3" matTooltip="borrar"><i class="fas fa-exclamation-triangle"></i></button>
+          <button class="btn btn-outline-danger m-1" mat-raised-button data-toggle="modal" data-target="#ctg3" matTooltip="borrar" (click)="idActualizar(alumno._id)"><i class="fas fa-exclamation-triangle"></i></button>
           <button class="btn btn-outline-secondary m-1" mat-raised-button (click)="idActualizar(alumno._id)" data-toggle="modal" data-target="#act" matTooltip="modificar"><i class="fas fa-user-edit"></i></button>
           </mat-cell>
         </ng-container>
@@ -264,15 +264,15 @@
           
               numero de hermanos(sin incluirte): <input type="number" style=" margin: 0; width: 50px;" name="numHermanos" [(ngModel)]="alumnoNew.numHermanos" #numHermanos="ngModel"> Edades(de menor a mayor sin incluirte): <input type="numer" style=" margin: 0; width: 300px;" name="edades" [(ngModel)]="alumnoNew.edades" #edades="ngModel" required>
               <h2 style="margin: 0px;">"Por una profunda formacion moral y cristiana" SJPII</h2>
-            <button class="btn m-2" color="warn" mat-raised-button style="float:right;" onclick="document.location.reload();">Actualizar</button>
-            <button type="button" class="btn btn-info m-2" style="float:right;" (click)="modifcar()" matTooltip="recarga la pagina">Guardar cambios</button>
+            <button class="btn m-2" color="warn" mat-raised-button style="float:right;" matTooltip="recarga la pagina" onclick="document.location.reload();">Actualizar</button>
+            <button type="button" class="btn btn-info m-2" style="float:right;" (click)="modifcar()">Guardar cambios</button>
           </form>
             </div>
             </div> 
         </div>
     </div>
 
-    <div class="modal modal3" tabindex="-1" id='ctg3'>
+    <div class="modal modal3" tabindex="-1" id="ctg3">
       <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
@@ -288,4 +288,4 @@
                   </div>
               </div>
       </div>
-      </div>
+  </div>

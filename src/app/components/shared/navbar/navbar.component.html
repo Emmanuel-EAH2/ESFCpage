@@ -2,10 +2,10 @@
   <div class="collapse navbar-collapse">
     <img src="../../../../assets/escudo nombre - color.png" alt="escudo Escuela Secundaria de Formacion Católica" matTooltip="Escuela Secundaria de Formacion Catolica" width="240px" height="85px" routerLink="home">
 
-      <form (submit)="$event.preventDefault" class="form-inline" style="margin: 0px 0px 0px 55px;">
+      <form (submit)="$event.preventDefault" class="form-inline" style="margin: 0px 0px 0px 50px;">
         <input #valorBuscar (keyup.enter)="Search(valorBuscar.value)" type="search" placeholder="Search" aria-label="Search" >
-        <button class="btn btn-outline-success my-2 my-sm-0" (click)="Search(valorBuscar.value)" style="margin-right: 120px;" type="submit" matTooltip="Buscar">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="Search(valorBuscar.value)" style="margin-right: 200px;" type="submit" matTooltip="Buscar">Search</button>
       </form>
-      
+      <a *ngIf="app.loggedIn()" (click)="app.logout()"><button class="btn btn-outline-dark">Cerrar sesion</button></a>
     </div>
   </nav>

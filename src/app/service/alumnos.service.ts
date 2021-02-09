@@ -21,7 +21,7 @@ export class AlumnosService {
      return this.http.get('http://localhost:3003/AlumnosSantaInes').toPromise();
    }
 
-   getDataById(id: string){
+   getDataById(id: Number){
      return this.http.get(`http://localhost:3003/alumnos/${id}`).toPromise();
    }
 
@@ -32,10 +32,10 @@ export class AlumnosService {
       this.alumnos = data
       for(let i=0; i < this.alumnos.length; i++){
         let alumno = this.alumnos[i];
-        const colonia = alumno.colonia.toLowerCase();
-        const calle = alumno.calle.toLowerCase();
+        // const colonia = alumno.colonia.toLowerCase();
+        // const calle = alumno.calle.toLowerCase();
         const nombre = alumno.nombre.toLowerCase();
-               if(nombre.indexOf(termino) || calle.indexOf(termino) || colonia.indexOf(termino) >= 0){
+               if(nombre.indexOf(termino) >= 0){
                  alumno.index = i;
                  resultados.push(alumno);
               }
@@ -43,19 +43,19 @@ export class AlumnosService {
         });
         return resultados;
   }
+
+  // || calle.indexOf(termino) || colonia.indexOf(termino)
 /*****************FIN DE LAS FUNCIONES GET**********************/
 
   postAlumnos(alumno: alumnosModel){
     return this.http.post('http://localhost:3003/alumnos', alumno).toPromise();
  }
 
- putAlumnos(id: string, alumno: alumnosModel){
+ putAlumnos(id: Number, alumno: alumnosModel){
    return this.http.put(`http://localhost:3003/alumnos/${id}`, alumno).toPromise(); 
  }
 
- deleteAlumnos(id:string){
+ deleteAlumnos(id: Number){
    return this.http.delete(`http://localhost:3003/alumnos/${id}`).toPromise();
  }
-
-
 }

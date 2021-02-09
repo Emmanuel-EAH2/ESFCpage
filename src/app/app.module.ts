@@ -11,6 +11,8 @@ import {ReactiveFormsModule} from '@angular/forms'
 import { RouterModule } from "@angular/router";
 import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./service/token.interceptor.service";
+// import { NgxYoutubePlayerModule } from "ngx-youtube-player";
+// import { YouTubePlayerModule } from "@angular/youtube-player";
 /***COMPONENTS***/
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -62,6 +64,8 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent
   ],
   imports: [
+    // NgxYoutubePlayerModule,
+    // YouTubePlayerModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -69,7 +73,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [AuthGuard, 
   {

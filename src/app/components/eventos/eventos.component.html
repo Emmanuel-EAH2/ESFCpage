@@ -55,6 +55,7 @@
             <h2>Crear evento ESFC</h2>
         </div>
         <form method="post" enctype="multipart/form-data" #form="ngForm" ngForm="form" (ngSubmit)="enviarEvento(form)" autocomplete="off">
+            <input type="number" placeholder="num evento" style="width: 150px;" name="_id" [(ngModel)]="eventoNew._id" #_id="ngModel">
               <input type="text" class="form-control shadow" style="width: 500px; margin-left: 435px;" placeholder="Ingresar secundaria" matTooltip="Nombre de la secundaria" name="secundaria" #secundaria="ngModel" [(ngModel)]="eventoNew.secundaria">
               <input type="text" class="form-control shadow" style="width: 500px; margin-left: 435px;" placeholder="Ingresar nombre del evento" matTooltip="Nombre del evento" name="nombre" #nombre="ngModel" [(ngModel)]="eventoNew.nombre">
               <input type="datetime-local" class="form-control shadow" style="width: 300px; margin-left: 400px;" matTooltip="dia del evento" name="dia" #dia="ngModel" [(ngModel)]="eventoNew.dia">-

@@ -51,15 +51,14 @@ eliminarAlumno(){
 }
 
 modifcar(){
-this.app.putAlumnos( this.idUsuarioActualizar, this.alumnoNew).then((data:any)=>{
+this.app.putAlumnos(this.idUsuarioActualizar, this.alumnoNew).then((data:any)=>{
   this.alumnoNew = data
   console.log(this.alumnoNew);
  }).catch((error)=>console.log(error));
 }
 
-idActualizar(idAlumno: string){
+idActualizar(idAlumno: Number){
   this.idUsuarioActualizar = idAlumno;
   console.log(this.idUsuarioActualizar);
+   }
 }
-
-  }

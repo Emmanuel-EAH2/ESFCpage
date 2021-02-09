@@ -3,6 +3,7 @@ import { SecundariaService } from "../../service/secundaria.service";
 import { secuModel } from "../../models/secundaria";
 import { NgForm } from '@angular/forms';
 import { Router } from "@angular/router";
+// import { YouTubePlayer } from "@angular/youtube-player";
 
 
 @Component({
@@ -18,7 +19,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     // this.secundaria();
+    this.app.getSecus().then((data:any)=>{
+      this.autenticar = data.secus;
+      console.log(this.autenticar);
+    }).catch((error)=>console.log(error));
   }
+
+
 
   secundaria(){
     this.app.getUser(this.idSecu).then((data:any)=>{
@@ -37,8 +44,6 @@ export class LoginComponent implements OnInit {
       this.route.navigateByUrl('/home');
     }).catch((err)=>console.log(err));
   }
-
-
 
   // IdSecundaria(id: any){
   //   this.idSecu = id
